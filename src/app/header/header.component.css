@@ -1,0 +1,14 @@
+header {
+    background-color: green;
+    color: black;
+    padding: 3.5%;
+}
+
+ul {
+    display: inline;
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}
