@@ -7,15 +7,14 @@ import { FetchService } from '../fetch.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  public users;
+  public users = [];
 
   constructor(private fetchService: FetchService) { }
 
   ngOnInit() {
-    this.fetchService.getUser().subscribe((data) => {
-      console.log(data);
-      this.users = data['users'];
-    });
+    this.fetchService.getUser()
+      .subscribe(data => this.users = data);
+      
   }
-
 }
+
