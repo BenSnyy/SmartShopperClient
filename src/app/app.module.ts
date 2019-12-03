@@ -4,6 +4,7 @@
 //import { FormsModule } from '@angular/forms';
 //import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -81,7 +82,6 @@ import { AlertComponent } from './_components';
     ],
     bootstrap: [AppComponent]
 
-import { AboutComponent } from './about/about.component';
 
 const material = [
   MatButtonToggleModule, MatIconModule, MatBadgeModule, MatProgressSpinnerModule, MatToolbarModule
