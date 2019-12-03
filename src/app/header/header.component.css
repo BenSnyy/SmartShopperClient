@@ -1,0 +1,20 @@
+header {
+    background-color: lightgreen;
+    color: black;
+    padding: 3.5%;
+}
+
+.navbar {
+    background-color: inherit;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+button {
+    margin-right: 1rem;
+    padding-right: 1rem;
+}
+
+.logoTitle {
+    font-size: 2.5rem;
+}
