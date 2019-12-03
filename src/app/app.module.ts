@@ -1,16 +1,10 @@
 
-//import { BrowserModule } from '@angular/platform-browser';
-//import { NgModule } from '@angular/core';
-//import { FormsModule } from '@angular/forms';
-//import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 import { MatButtonToggleModule, MatIconModule, MatProgressSpinnerModule, MatToolbarModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -28,15 +22,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 //import { LoginComponent } from './login/login.component';
 //import { HomeComponent } from './home/home.component';
 
-
 //export class AppModule { }
 
-
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 // used to create fake backend
 //import { fakeBackendProvider } from './_helpers';
@@ -49,15 +38,22 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
 
+const material = [
+  MatButtonToggleModule, MatIconModule, MatBadgeModule, MatProgressSpinnerModule, MatToolbarModule
+];
+
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
         appRoutingModule,
+        MatButtonModule,
+        AppRoutingModule,
         FormsModule,
         RouterModule,
-        NoopAnimationsModule,      
+        NoopAnimationsModule,
+        material
     ],
     declarations: [
         AppComponent,
@@ -72,6 +68,8 @@ import { AlertComponent } from './_components';
         RegisterComponent,
         LoginComponent,
         HomeComponent,
+        AboutComponent,
+        routingComponents
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
@@ -81,11 +79,8 @@ import { AlertComponent } from './_components';
         //fakeBackendProvider
     ],
     bootstrap: [AppComponent]
+  })
 
-
-const material = [
-  MatButtonToggleModule, MatIconModule, MatBadgeModule, MatProgressSpinnerModule, MatToolbarModule
-];
 
 @NgModule({
   declarations: [
