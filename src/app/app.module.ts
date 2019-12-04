@@ -10,19 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
-
-
-//import { AppComponent } from './app.component';
-import { SignupComponent } from './signup/signup.component';
 import { FooterComponent } from './footer/footer.component'; 
 import { HeaderComponent } from './header/header.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-//import { RegisterComponent } from './register/register.component';
-//import { LoginComponent } from './login/login.component';
-//import { HomeComponent } from './home/home.component';
-
-//export class AppModule { }
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -45,63 +36,35 @@ const material = [
 @NgModule({
     imports: [
         BrowserModule,
-        ReactiveFormsModule,
         HttpClientModule,
+        ReactiveFormsModule,
         appRoutingModule,
         MatButtonModule,
-        AppRoutingModule,
+        NoopAnimationsModule,
+        material,
         FormsModule,
         RouterModule,
-        NoopAnimationsModule,
-        material
+        AppRoutingModule,
     ],
     declarations: [
         AppComponent,
-        HomeComponent,
-        LoginComponent,
-        RegisterComponent,
-        AlertComponent,
-        AppComponent,
-        SignupComponent,
         FooterComponent,
         HeaderComponent,
+        AboutComponent,
+        routingComponents,
+        AlertComponent,
         RegisterComponent,
         LoginComponent,
         HomeComponent,
-        AboutComponent,
-        routingComponents
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         // provider used to create fake backend
-        //fakeBackendProvider
+        // fakeBackendProvider
     ],
     bootstrap: [AppComponent]
   })
 
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    SignupComponent,
-    FooterComponent,
-    HeaderComponent,
-    AboutComponent,
-    routingComponents
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    RouterModule,
-    MatButtonModule,
-    AppRoutingModule,
-    material
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-
-})
 export class AppModule { };
