@@ -1,12 +1,6 @@
-<app-header></app-header>
 
 <!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
-    </div>
-</nav>
+<app-header></app-header>
 
 <!-- main app container -->
 <div>
@@ -16,9 +10,6 @@
                 
                 <router-outlet></router-outlet>
             </div>
-        </div>
-    </div>
-</div>
 
 <!-- <app-signup></app-signup> -->
 <!-- <router-outlet></router-outlet> -->
