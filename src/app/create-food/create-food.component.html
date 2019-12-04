@@ -1,3 +1,4 @@
+
 <form 
     [formGroup]="createFood"
     (ngSubmit)="onCreateFood()" 
@@ -38,10 +39,10 @@
 </form>
 
 
-<div *ngIf="food.length !== 0; else noFood"> 
+
+<div *ngIf="food.length !== 0; else noFood" id="foodResults"> 
     <app-display-food 
     *ngFor="let food of food"
     [food]="food"
     ></app-display-food>
 </div>
-
