@@ -3,15 +3,25 @@
 }
 
 .card {
-    box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.2);
+    background-color:rgb(245, 245, 245, .9);
+    box-shadow:0 0.5em 1em black;
     transition: 0.3s;
-    width: 30vw;
+    width: 20vw;
+    height: 250px;
     text-align: center;
+    margin-left: 20px;
+    margin-bottom:20px;
 }
 .card:hover {
-    box-shadow: 0.5em 0.5em 2em rgba(0, 0 , 0, 0.2);
+    box-shadow: 0.5em 0.5em 2em black;
 }
 
 .cardContainer {
     padding: 1em 2em;
+}
+.cardContainer h1 {
+    font-size: 30px;
+}
+.cardContainer p {
+    font-size: 20px;
 }

@@ -1,7 +1,25 @@
 #addFoodForm {
-    background-color: white;
+    background-color: rgb(144, 238, 144, 0.8);
     width:20vw;
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top:25vh;
+    margin-left: 3vw;
+    border-radius: 10px;
+    position:fixed;
+    padding:15px;
+    font-weight:bold;
+    z-index:100;
+}
+
+button {
+    border-radius: 10px;
+    background-color: rgb(255, 182, 193, 0.9);
+    margin-top:20px;
+}
+
+#foodResults {
+    padding-top: 25vh;
+    margin-left: 25vw;
 }

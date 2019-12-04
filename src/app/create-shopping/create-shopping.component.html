@@ -31,7 +31,7 @@
 </form>
 
 
-<div *ngIf="shopping.length !== 0; else noshopping"> 
+<div *ngIf="shopping.length !== 0; else noshopping" id="shoppingResults"> 
     <app-display-shopping 
     *ngFor="let shopping of shopping"
     [shopping]="shopping"
