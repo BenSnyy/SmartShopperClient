@@ -1,0 +1,47 @@
+<form 
+    [formGroup]="createFood"
+    (ngSubmit)="onCreateFood()" 
+    id="addFoodForm"
+    >
+    <label for="food">Food</label>
+    <input
+        formControlName = "food"
+        type="text"
+        name="food"
+        required
+    >
+
+    <label for="quantity">Quantity</label>
+    <input
+        formControlName = "quantity"
+        type="number"
+        name="quantity"
+        required
+    >
+
+    <label for="expiration">Expiration</label>
+    <input
+        formControlName = "expiration"
+        type="date"
+        name="expiration"
+    >
+
+    <label for="brand">Brand</label>
+    <input
+        formControlName = "brand"
+        type="text"
+        name="brand"
+    >
+
+
+    <button type="submit">Add</button>
+</form>
+
+
+<div *ngIf="food.length !== 0; else noFood"> 
+    <app-display-food 
+    *ngFor="let food of food"
+    [food]="food"
+    ></app-display-food>
+</div>
+

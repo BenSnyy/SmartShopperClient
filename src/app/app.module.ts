@@ -37,6 +37,10 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
+import { CreateFoodComponent } from './create-food/create-food.component';
+import { DisplayFoodComponent } from './display-food/display-food.component';
+import { CreateShoppingComponent } from './create-shopping/create-shopping.component';
+import { DisplayShoppingComponent } from './display-shopping/display-shopping.component';
 
 const material = [
   MatButtonToggleModule, MatIconModule, MatBadgeModule, MatProgressSpinnerModule, MatToolbarModule
@@ -69,7 +73,11 @@ const material = [
         LoginComponent,
         HomeComponent,
         AboutComponent,
-        routingComponents
+        routingComponents,
+        CreateFoodComponent,
+        DisplayFoodComponent,
+        CreateShoppingComponent,
+        DisplayShoppingComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
