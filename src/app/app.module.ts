@@ -1,4 +1,3 @@
-
 import { Routes, RouterModule } from '@angular/router';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -82,26 +81,4 @@ const material = [
     bootstrap: [AppComponent]
   })
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    SignupComponent,
-    FooterComponent,
-    HeaderComponent,
-    AboutComponent,
-    routingComponents
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    RouterModule,
-    MatButtonModule,
-    AppRoutingModule,
-    material
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-
-})
 export class AppModule { };
