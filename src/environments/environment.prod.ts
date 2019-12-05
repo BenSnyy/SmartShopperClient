@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3000'
+  //apiUrl: 'https://smartshopperserver.herokuapp.com',
+  apiUrl: 'https://localhost/3000'
 };

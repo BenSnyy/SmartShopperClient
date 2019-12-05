@@ -1,16 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms'
 
+
 @Component({
   selector: 'app-create-food',
   templateUrl: './create-food.component.html',
   styleUrls: ['./create-food.component.css']
 })
 export class CreateFoodComponent implements OnInit {
+
   createFood: FormGroup;
   food = [];
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder
+  ) { 
+    
+
+  }
 
   ngOnInit() {
     this.createFood = this.fb.group({
