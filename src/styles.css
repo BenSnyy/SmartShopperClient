@@ -10,6 +10,6 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif; 
     background-image: url("./assets/fridge.jpg");
     background-repeat: repeat;
-    background-position:center;
+    background-position: center;
     background-size: cover;
 }
