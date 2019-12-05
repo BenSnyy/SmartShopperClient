@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://smartshopperserver.herokuapp.com'
+  apiUrl: 'https://smartshopperserver.herokuapp.com'
 };
 
 /*
