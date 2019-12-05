@@ -49,11 +49,7 @@ const material = [
         FormsModule,
         RouterModule,
         AppRoutingModule,
-<<<<<<< HEAD
-        material
-=======
         material,
->>>>>>> b49f757e0863e16c7e8b3d8391b4ca4ea7ad18a2
     ],
     declarations: [
         AppComponent,
