@@ -6,6 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 import { Routes, RouterModule } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 
 import { FormsModule } from '@angular/forms';
 import { MatButtonToggleModule, MatIconModule, MatProgressSpinnerModule, MatToolbarModule } from '@angular/material';
@@ -13,21 +14,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
-
-import { AboutComponent } from './about/about.component';
-
-
-//import { AppComponent } from './app.component';
-import { SignupComponent } from './signup/signup.component';
 import { FooterComponent } from './footer/footer.component'; 
 import { HeaderComponent } from './header/header.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-//import { RegisterComponent } from './register/register.component';
-//import { LoginComponent } from './login/login.component';
-//import { HomeComponent } from './home/home.component';
-
-//export class AppModule { }
 
 // used to create fake backend
 //import { fakeBackendProvider } from './_helpers';
@@ -52,25 +42,21 @@ const material = [
 @NgModule({
     imports: [
         BrowserModule,
-        ReactiveFormsModule,
         HttpClientModule,
+        ReactiveFormsModule,
         appRoutingModule,
         AppRoutingModule,
         FormsModule,
         RouterModule,
-        NoopAnimationsModule,
-        material
+        AppRoutingModule,
     ],
     declarations: [
         AppComponent,
-        HomeComponent,
-        LoginComponent,
-        RegisterComponent,
-        AlertComponent,
-        AppComponent,
-        SignupComponent,
         FooterComponent,
         HeaderComponent,
+        AboutComponent,
+        routingComponents,
+        AlertComponent,
         RegisterComponent,
         LoginComponent,
         HomeComponent,
@@ -86,7 +72,7 @@ const material = [
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         // provider used to create fake backend
-        //fakeBackendProvider
+        // fakeBackendProvider
     ],
     bootstrap: [AppComponent]
   })
