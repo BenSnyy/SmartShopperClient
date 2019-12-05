@@ -25,3 +25,14 @@
 .cardContainer p {
     font-size: 20px;
 }
+
+#editButton {
+    background-color: rgba(255, 183, 0, 0.5);
+    margin-right: 70px;
+
+}
+
+#deleteButton {
+    background-color: rgb(255, 0, 0, 0.5);
+
+}

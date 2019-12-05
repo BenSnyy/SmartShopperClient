@@ -5,3 +5,7 @@ h1 {
 /* #aboutP {
     padding-left: 32vw;
 } */
+
+.container {
+    background-color: rgb(128, 128, 128, 0.8);
+}
