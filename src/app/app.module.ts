@@ -48,7 +48,8 @@ const material = [
         AppRoutingModule,
         FormsModule,
         RouterModule,
-        material
+        AppRoutingModule,
+        material,
     ],
     declarations: [
         AppComponent,
