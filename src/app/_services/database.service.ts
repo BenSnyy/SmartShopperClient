@@ -15,14 +15,15 @@ const httpOptions = {
 })
 
 export class DatabaseService {
+  // private dbUrl = 'https://smartshopperserver.herokuapp.com/food/getall';
 
   constructor(private http: HttpClient) { }
 
-  getFood() {
+  getFood() : Observable<Food[]> {
     return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`)
   }
 
-  makeFood(food: Food) {
+  makeFood(food: Food) : Observable<Food[]> {
     return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food, httpOptions)
   }
 
