@@ -7,7 +7,7 @@ import { CreateShoppingComponent } from './create-shopping/create-shopping.compo
 
 const routes: Routes = [
     { path: 'about', component: AboutComponent},
-    { path: 'food/:id', component: CreateFoodComponent },
+    { path: 'food', component: CreateFoodComponent },
     { path: 'shopping', component: CreateShoppingComponent}
 ];
 
