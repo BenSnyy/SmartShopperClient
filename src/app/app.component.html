@@ -4,9 +4,9 @@
         <div class="logoTitle">Smart Shopper</div>
         <div>
             <button routerLink='/about' routerLinkActive='active' mat-raised-button>About Smart Shopper</button>
-            <button routerLink='/food/0' routerLinkActive='active' mat-raised-button>My Groceries</button>
+            <button routerLink='/food' routerLinkActive='active' mat-raised-button>My Groceries</button>
             <button routerLink='/shopping' routerLinkActive='active' mat-raised-button>Shopping List</button>
-            <button (click)="logout()" mat-raised-button>Logout</button>
+            <button routerLink='/' (click)="logout()" mat-raised-button>Logout</button>
         </div>
     </mat-toolbar>
 
