@@ -30,7 +30,7 @@ export class AuthenticationService {
                     localStorage.setItem('currentUser', JSON.stringify(user));
                     this.currentUserSubject.next(user);
                 }
-
+                console.log(username, password, user);
                 return user;
             }));
     }

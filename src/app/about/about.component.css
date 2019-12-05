@@ -1,0 +1,24 @@
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.container {
+    padding-top: 12vh;
+    opacity:0.99;
+    background-color: whitesmoke;
+}
+
+#aboutP {
+    padding-left: 1px;
+}
+
+.overlay{
+    opacity:0.95;
+    background-color: whitesmoke;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
