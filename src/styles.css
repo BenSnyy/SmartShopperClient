@@ -14,23 +14,23 @@ body {
     background-size: cover;
 }
 
-.navbar {
+#navbar {
     background-color: lightgreen;
     justify-content: space-between;
     font-size: 1.2rem;
-    height:10vh;
-    top:0;
+    height: 10vh;
+    top: 0;
     position: fixed;
     overflow: hidden;
-    z-index:100;
+    z-index: 100;
 }
 
-.mat-raised-button {
+#navButton {
     margin-right: 2rem;
     padding-right: 1rem;
 }
 
-button:hover {
+#navButton:hover {
     box-shadow: 0.5em 0.5em 1em rgb(0, 0, 0, 0.5);
 }
 

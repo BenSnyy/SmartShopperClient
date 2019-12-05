@@ -23,7 +23,7 @@ export class DatabaseService {
   }
 
   makeFood(food: Food) {
-    return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food)
+    return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food, httpOptions)
   }
 
 }
