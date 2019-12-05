@@ -23,10 +23,9 @@ body {
     position: fixed;
     overflow: hidden;
     z-index:100;
-    
 }
 
-.mat-raised-button {
+#navButton {
     margin-right: 2rem;
     padding-right: 1rem;
 }
