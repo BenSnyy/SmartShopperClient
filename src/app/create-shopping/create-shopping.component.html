@@ -1,0 +1,40 @@
+<form 
+    [formGroup]="createShopping"
+    (ngSubmit)="onCreateShopping()" 
+    id="addShoppingForm"
+    >
+    <label for="food">Food</label>
+    <input
+        formControlName = "food"
+        type="text"
+        name="food"
+        required
+    >
+
+    <label for="quantity">Quantity</label>
+    <input
+        formControlName = "quantity"
+        type="number"
+        name="quantity"
+        required
+    >
+
+    <label for="brand">Brand</label>
+    <input
+        formControlName = "brand"
+        type="text"
+        name="brand"
+    >
+
+
+    <button type="submit">Add</button>
+</form>
+
+
+<div *ngIf="shopping.length !== 0; else noshopping" id="shoppingResults"> 
+    <app-display-shopping 
+    *ngFor="let shopping of shopping"
+    [shopping]="shopping"
+    ></app-display-shopping>
+</div>
+
