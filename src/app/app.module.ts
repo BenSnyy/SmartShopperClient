@@ -61,8 +61,6 @@ const material = [
         RegisterComponent,
         LoginComponent,
         HomeComponent,
-        AboutComponent,
-        routingComponents,
         CreateFoodComponent,
         DisplayFoodComponent,
         CreateShoppingComponent,
