@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms'
+import { DatabaseService } from '../_services/database.service'
 
 @Component({
   selector: 'app-create-food',
@@ -10,7 +11,7 @@ export class CreateFoodComponent implements OnInit {
   createFood: FormGroup;
   food = [];
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private dbService: DatabaseService) { }
 
   ngOnInit() {
     this.createFood = this.fb.group({
@@ -20,19 +21,19 @@ export class CreateFoodComponent implements OnInit {
       brand: new FormControl()
     })
 
-    // this.findFood();
+    this.findFood();
   }
 
   onCreateFood() : void {
     this.food.unshift(this.createFood.value)
-    // this.dbService.makeFood(this.food[0]).subscribe(Food => this.food[0] = Food)
+    this.dbService.makeFood(this.food[0]).subscribe(Food => this.food[0] = Food)
   }
 
-  // findFood() : void {
-  //   this.dbService.getFood().subscribe(Food => {
-  //     this.food = Food;
-  //     this.food.reverse();
-  //   })
-  // }
+  findFood() : void {
+    this.dbService.getFood().subscribe(Food => {
+      this.food = Food;
+      this.food.reverse();
+    })
+  }
 
 }
