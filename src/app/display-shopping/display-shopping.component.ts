@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core'
 
-
 @Component({
   selector: 'app-display-shopping',
   templateUrl: './display-shopping.component.html',
