@@ -22,7 +22,7 @@ export class DatabaseService {
   getFood() : Observable<Food[]> {
     return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`)
   }
-
+  
   makeFood(food: Food) : Observable<Food[]> {
     return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food, httpOptions)
   }
