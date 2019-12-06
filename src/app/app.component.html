@@ -1,6 +1,14 @@
 
 <!-- nav -->
-<app-header></app-header>
+    <mat-toolbar class="navbar" id="navbar">
+        <div class="logoTitle">Smart Shopper</div>
+        <div>
+            <button id="navbutton" routerLink='/about' routerLinkActive='active' mat-raised-button>About Smart Shopper</button>
+            <button id="navbutton" routerLink='/food' routerLinkActive='active' mat-raised-button>My Groceries</button>
+            <button id="navbutton" routerLink='/shopping' routerLinkActive='active' mat-raised-button>Shopping List</button>
+            <button id="navbutton" routerLink='/' (click)="logout()" mat-raised-button>Logout</button>
+        </div>
+    </mat-toolbar>
 
 <!-- main app container -->
     <div>
@@ -10,5 +18,4 @@
 <!-- <app-signup></app-signup> -->
 <!-- <router-outlet></router-outlet> -->
 <app-footer></app-footer>
-
 

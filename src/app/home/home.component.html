@@ -1,9 +1,25 @@
-<h1>Hi {{currentUser.firstName}}!</h1>
-<p>You're logged in with Angular 8!!</p>
-<h3>All registered users:</h3>
-<ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul>
+<div class="overlay">
+        <div class="container">
+          <h2>About Us</h2>
+            <div class="row justify-content-md-center">
+              
+          <div class="col-5">
+              <div class="aboutUs">
+                  <h3>Our Mission</h3>
+                  <div id="ourM" class="">
+                    <p>We believe that everybody should have access to know what food they have at their home currently. So when you are out shopping, you can see what you need to buy, and also know when your perisable food items will expire.</p>
+                  </div>
+        
+                  <h3>Why Smart Shopper?</h3>
+                <div id="whyUs" class="">
+                  <p>Our company’s name stems from the Roman poet Horace, who wrote: “A cultivated smart shopper, one that badgers less, can persuade all the more. Artful ridicule can address contentious issues more competently and vigorously than can severity alone.” Between that message and a shared vision of global conquest, we feel rather connected to the Romans, and our Foods.</p>
+                </div>
+              </div>
+          </div>
+        
+          <div class="col">
+            <img src="../../assets/grocerystore.jpg" id="aboutP"/>
+          </div>
+          </div>
+          </div>
+          </div>
