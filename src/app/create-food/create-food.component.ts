@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { DatabaseService } from '../_services/database.service';
+import { Food } from '../_models/food.model';
 
 
 @Component({
@@ -36,4 +37,5 @@ export class CreateFoodComponent implements OnInit {
       this.food.reverse();
     })
   }
+
 }
