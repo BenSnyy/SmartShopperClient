@@ -16,10 +16,10 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
 
   @Input() set food(food:any) { //this will receive the value of food
     this._food = food;
-}
+  }
 
-get food() : any { //this will fetch the food we stored in _food
+  get food() : any { //this will fetch the food we stored in _food
   return this._food;
-}
+  }
 
 }

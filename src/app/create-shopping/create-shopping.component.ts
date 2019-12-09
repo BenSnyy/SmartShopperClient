@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms'
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { DatabaseService } from '../_services/database.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class CreateShoppingComponent implements OnInit {
   createShopping: FormGroup;
   shopping = [];
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private dbService: DatabaseService) { }
 
   ngOnInit() {
     this.createShopping = this.fb.group({
@@ -20,20 +21,19 @@ export class CreateShoppingComponent implements OnInit {
       quantity: new FormControl(),
       brand: new FormControl()
     })
-
-    // this.findShopping();
+    this.findShopping();
   }
 
   onCreateShopping() : void {
     this.shopping.unshift(this.createShopping.value)
-    // this.dbService.makeShopping(this.shopping[0]).subscribe(Shopping => this.shopping[0] = Shopping)
+    this.dbService.makeShopping(this.shopping[0]).subscribe(Shopping => this.shopping[0] = Shopping)
   }
 
-  // findShopping() : void {
-  //   this.dbService.getShopping().subscribe(Shopping => {
-  //     this.shopping = Shopping;
-  //     this.shopping.reverse();
-  //   })
-  // }
+  findShopping() : void {
+    this.dbService.getShopping().subscribe(Shopping => {
+      this.shopping = Shopping;
+      this.shopping.reverse();
+    })
+  }
 
 }

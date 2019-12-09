@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
-import { DatabaseService } from '../_services/database.service'
-
-import { Router, ActivatedRoute } from '@angular/router';
-import { first } from 'rxjs/operators';
-// import { FoodService } from '../_services/'
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { DatabaseService } from '../_services/database.service';
 
 
 @Component({
@@ -25,13 +21,13 @@ export class CreateFoodComponent implements OnInit {
       expiration: new FormControl(),
       brand: new FormControl()
     })
-
     this.findFood();
   }
 
   onCreateFood() : void {
     this.food.unshift(this.createFood.value)
-    this.dbService.makeFood(this.food[0]).subscribe(Food => this.food[0] = Food)
+    this.dbService.makeFood(this.food[0]).subscribe(Food => {console.log(Food) 
+    this.food[0] = Food})
   }
 
   findFood() : void {
@@ -40,5 +36,4 @@ export class CreateFoodComponent implements OnInit {
       this.food.reverse();
     })
   }
-
 }
