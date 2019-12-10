@@ -19,10 +19,6 @@ import { HeaderComponent } from './header/header.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-// used to create fake backend
-//import { fakeBackendProvider } from './_helpers';
-
-import { appRoutingModule } from './app.routing';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
@@ -45,11 +41,9 @@ const material = [
         BrowserModule,
         HttpClientModule,
         ReactiveFormsModule,
-        appRoutingModule,
         AppRoutingModule,
         FormsModule,
         RouterModule,
-        AppRoutingModule,
         material,
     ],
     declarations: [
