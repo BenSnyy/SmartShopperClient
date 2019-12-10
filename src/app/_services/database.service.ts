@@ -31,7 +31,7 @@ export class DatabaseService {
 
 //Create or Make
   makeFood(food: Food) : Observable<Food[]> {
-    return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food, httpOptions)
+    return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food)
   }
 
   makeShopping(shopping: Shopping) : Observable<Shopping[]> {
@@ -40,7 +40,7 @@ export class DatabaseService {
 
 //Deletes
   deleteFood(id: number) {
-    return this.http.delete(`${environment.apiUrl}/users/${id}`);
-}
+    return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`);
+  }
 
 }

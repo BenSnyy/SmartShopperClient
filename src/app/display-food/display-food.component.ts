@@ -7,7 +7,7 @@ import { Input } from '@angular/core'
   styleUrls: ['./display-food.component.css']
 })
 export class DisplayFoodComponent implements OnInit { //this will store the food in _food
-  public _food = [];
+  public _food = [[]];
 
   constructor() { }
 
@@ -19,10 +19,10 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   }
 
   get food() : any { //this will fetch the food we stored in _food
-  return this._food;
+  return JSON.stringify(this._food);
   }
 
-  deleteFood() {
-    this._food
+  delete() {
+    this._food = this._food.splice[this.food];
   }
 }
