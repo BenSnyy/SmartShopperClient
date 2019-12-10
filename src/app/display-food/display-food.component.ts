@@ -14,7 +14,7 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   ngOnInit() {
   }
 
-  @Input() set food(food:any) { //this will receive the value of food
+  @Input() set food(food: any) { //this will receive the value of food
     this._food = food;
   }
 
@@ -22,7 +22,9 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   return this._food;
   }
 
-  delete() {
-    this._food = this._food.splice[this.food];
+  delete(id: number) {
+    // this._food = this.food[];
+    console.log(this._food)
+    console.log(this.food)
   }
 }
