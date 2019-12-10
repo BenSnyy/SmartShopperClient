@@ -4,12 +4,14 @@ import { DatabaseService } from '../_services/database.service';
 import { Food } from '../_models/food.model';
 
 
+
 @Component({
   selector: 'app-create-food',
   templateUrl: './create-food.component.html',
   styleUrls: ['./create-food.component.css']
 })
 export class CreateFoodComponent implements OnInit {
+
   createFood: FormGroup;
   food = [];
 

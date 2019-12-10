@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core'
+import { Subscription } from 'rxjs';
+import { first } from 'rxjs/operators';
+
+import { Food } from '../_models/food.model';
+import { AuthenticationService } from '../_services';
+import { FoodService } from '../_services/food.service';
 
 @Component({
   selector: 'app-display-food',
@@ -7,14 +13,27 @@ import { Input } from '@angular/core'
   styleUrls: ['./display-food.component.css']
 })
 export class DisplayFoodComponent implements OnInit { //this will store the food in _food
-  public _food = [];
+  //currentUser: User;
+  currentUserSubscription: Subscription;  
+  public _food = {};
+  foods: Food[] = [];
 
-  constructor() { }
+  constructor(
+    private authenticationService: AuthenticationService,
+    private foodService: FoodService,
+  ) { }
 
   ngOnInit() {
+      this.loadAllFoods();
   }
 
-  @Input() set food(food: any) { //this will receive the value of food
+  private loadAllFoods() {
+    this.foodService.getAll().pipe(first()).subscribe(foods => {
+        this.foods = foods;
+    });
+}
+
+  @Input() set food(food:any) { //this will receive the value of food
     this._food = food;
   }
 
@@ -22,14 +41,9 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   return this._food;
   }
 
-<<<<<<< HEAD
-
-
-=======
   delete(_id: number) {
     this.food = this.food.delete[this.food.id];
     console.log(this._food)
     console.log(this.food)
   }
->>>>>>> bf5ea64c1b03a0c5ed0de1b0f4ddd26d6b6ff2f5
 }
