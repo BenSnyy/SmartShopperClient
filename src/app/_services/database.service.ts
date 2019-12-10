@@ -16,7 +16,6 @@ const httpOptions = {
 })
 
 export class DatabaseService {
-  // private dbUrl = 'https://smartshopperserver.herokuapp.com/food/getall';
 
   constructor(private http: HttpClient) { }
 
@@ -31,6 +30,11 @@ export class DatabaseService {
 
 //Create or Make
   makeFood(food: Food) : Observable<Food[]> {
+<<<<<<< HEAD
+    //(food: imports interface Food model) : (Observable(asynchronous)waiting for Food  ) 
+    return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food, httpOptions)
+    //this.http(injected in the constructor)  
+=======
     return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food)
   }
 
@@ -41,6 +45,12 @@ export class DatabaseService {
 //Deletes
   deleteFood(id: number) {
     return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`);
+>>>>>>> bf5ea64c1b03a0c5ed0de1b0f4ddd26d6b6ff2f5
   }
+
+  // eraseFood(food: Food) : Observable<Food[]> {
+  //   return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`, httpOptions)
+  // }
+
 
 }
