@@ -7,21 +7,29 @@ import { Input } from '@angular/core'
   styleUrls: ['./display-food.component.css']
 })
 export class DisplayFoodComponent implements OnInit { //this will store the food in _food
-  public _food = {};
+  public _food = [];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  @Input() set food(food:any) { //this will receive the value of food
+  @Input() set food(food: any) { //this will receive the value of food
     this._food = food;
-}
+  }
 
-get food() : any { //this will fetch the food we stored in _food
+  get food() : any { //this will fetch the food we stored in _food
   return this._food;
-}
+  }
+
+<<<<<<< HEAD
 
 
-
+=======
+  delete(_id: number) {
+    this.food = this.food.delete[this.food.id];
+    console.log(this._food)
+    console.log(this.food)
+  }
+>>>>>>> bf5ea64c1b03a0c5ed0de1b0f4ddd26d6b6ff2f5
 }

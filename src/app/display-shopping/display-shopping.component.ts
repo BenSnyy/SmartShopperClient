@@ -8,7 +8,7 @@ import { Input } from '@angular/core'
   styleUrls: ['./display-shopping.component.css']
 })
 export class DisplayShoppingComponent implements OnInit {
-  public _shopping = {};
+  public _shopping = [];
 
 
   constructor() { }
@@ -18,11 +18,10 @@ export class DisplayShoppingComponent implements OnInit {
 
   @Input() set shopping(shopping:any) { //this will receive the value of shopping
     this._shopping = shopping;
-}
+  }
 
-get shopping() : any { //this will fetch the shopping we stored in _shopping
+  get shopping() : any { //this will fetch the shopping we stored in _shopping
   return this._shopping;
-}
-
+  }
 
 }
