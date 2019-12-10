@@ -5,7 +5,7 @@
             <p>Quanity: {{_food.quantity}}</p>
             <p>Exp: {{_food.expiration}}</p>
             <p>Brand: {{_food.brand}}</p>
-            <button mat-button id="editButton">Update</button><button mat-button id="deleteButton">Delete</button>
+            <button mat-button id="editButton">Update</button><button (click)="eraseFood()" mat-button id="deleteButton">Delete</button>
         </div>
     </div>
 </div>

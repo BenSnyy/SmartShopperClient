@@ -5,8 +5,10 @@ import { first } from 'rxjs/operators';
 import { User } from '../_models';
 import { UserService, AuthenticationService } from '../_services';
 
-@Component({ templateUrl: 'home.component.html' })
-export class HomeComponent implements OnInit, OnDestroy {
+@Component({
+    templateUrl: 'admin.component.html'
+})
+export class AdminComponent implements OnInit, OnDestroy {
     currentUser: User;
     currentUserSubscription: Subscription;
     users: User[] = [];
@@ -21,8 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        //this.loadAllUsers();
-        //this.adminButton
+        this.loadAllUsers();
     }
 
     ngOnDestroy() {
@@ -41,9 +42,4 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.users = users;
         });
     }
-
-    // private adminButton() {
-    //     if (currentUser.user.username !== 'administrator') {
-    // }
-
 }

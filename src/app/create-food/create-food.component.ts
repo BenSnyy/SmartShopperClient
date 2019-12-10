@@ -16,7 +16,10 @@ export class CreateFoodComponent implements OnInit {
   createFood: FormGroup;
   food = [];
 
-  constructor(private fb: FormBuilder, private dbService: DatabaseService) { }
+  constructor(
+    private fb: FormBuilder, 
+    private dbService: DatabaseService
+  ) { }
 
   ngOnInit() {
     this.createFood = this.fb.group({
@@ -30,8 +33,11 @@ export class CreateFoodComponent implements OnInit {
   }
 
   onCreateFood() : void {
+    //             void(is used after functions that doesn't return a value)        
     this.food.unshift(this.createFood.value)
+    //this.food(property, array).unshift(inserts elements at the start of the array)(createFood(property).value(key:value pair)) 
     this.dbService.makeFood(this.food[0]).subscribe(Food => this.food[0] = Food)
+    //this.dbService(property, DatabaseService imports makeFood function)(this.food[0])
   }
 
   findFood() : void {
