@@ -22,8 +22,8 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   return this._food;
   }
 
-  delete(id: number) {
-    // this._food = this.food[];
+  delete(_id: number) {
+    this.food = this.food.delete[this.food.id];
     console.log(this._food)
     console.log(this.food)
   }
