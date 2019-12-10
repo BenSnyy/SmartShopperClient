@@ -46,7 +46,9 @@
     ></app-display-food>
     <!-- <div class="deck">
         <div class="card">
-            <div class="cardContainer">
+            <div class="cardContainer" 
+            *ngFor="let food of food"
+            [food]="food">
                 <h1>{{food.food}}</h1>
                 <p>Quanity: {{food.quantity}}</p>
                 <p>Exp: {{food.expiration}}</p>
