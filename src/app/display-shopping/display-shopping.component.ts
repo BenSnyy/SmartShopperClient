@@ -8,7 +8,7 @@ import { Input } from '@angular/core'
   styleUrls: ['./display-shopping.component.css']
 })
 export class DisplayShoppingComponent implements OnInit {
-  public _shopping = {};
+  public _shopping = [];
 
 
   constructor() { }
