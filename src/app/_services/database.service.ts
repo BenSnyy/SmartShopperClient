@@ -36,14 +36,11 @@ export class DatabaseService {
   }
 
   makeShopping(shopping: Shopping) : Observable<Shopping[]> {
-    //(food: imports interface Food model) : (Observable(asynchronous)waiting for Food  ) 
     return this.http.post<Shopping[]>(`${environment.apiUrl}/shopping/create`, shopping, httpOptions)
-    //this.http(injected in the constructor)  
   }
 
   // eraseFood(food: Food) : Observable<Food[]> {
   //   return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`, httpOptions)
   // }
-
 
 }
