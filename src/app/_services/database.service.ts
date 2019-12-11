@@ -57,3 +57,5 @@ export class DatabaseService {
   // eraseFood(food: Food) : Observable<Food[]> {
   //   return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`, httpOptions)
   // }
+
+}
