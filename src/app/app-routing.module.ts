@@ -5,12 +5,14 @@ import { AboutComponent } from './about/about.component';
 import { CreateFoodComponent } from './create-food/create-food.component'
 import { CreateShoppingComponent } from './create-shopping/create-shopping.component';
 
+import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AuthGuard } from './_helpers';
 
 const routes: Routes = [
+    { path: 'admin', component: AdminComponent },
     { path: 'about', component: AboutComponent},
     { path: 'food', component: CreateFoodComponent },
     { path: 'shopping', component: CreateShoppingComponent},

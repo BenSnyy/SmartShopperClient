@@ -6,7 +6,7 @@
             <p>Exp: {{_food.expiration}}</p>
             <p>Brand: {{_food.brand}}</p>
             <button (click)="editFood()" mat-button id="editButton">Update</button>
-            <button (click)="delete()" mat-button id="deleteButton">Delete</button>
+            <button (click)="deleteFood(_food.id)" mat-button id="deleteButton">Delete</button>
         </div>
     </div>
 </div>
