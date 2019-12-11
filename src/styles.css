@@ -14,32 +14,5 @@ body {
     background-size: cover;
 }
 
-#navbar {
-    background-color: lightgreen;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    height:12vh;
-    top:0;
-    position: fixed;
-    overflow: hidden;
-    z-index:100;
-}
 
-#navButton {
-    margin-right: 2rem;
-    padding-right: 1rem;
-}
 
-#navbutton:hover {
-    box-shadow: 0.5em 0.5em 1em rgb(0, 0, 0, 0.5);
-}
-
-.logoTitle {
-    font-size: 2.5rem;
-    margin-left:2vw;
-}
-
-#navbutton {
-    margin-right: 2rem;
-    padding-right: 1rem;
-}
