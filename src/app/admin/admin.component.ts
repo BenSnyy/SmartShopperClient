@@ -6,11 +6,9 @@ import { User } from '../_models';
 import { UserService, AuthenticationService } from '../_services';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: 'home.component.html',
-    styleUrls: ['./home.component.css']
+    templateUrl: 'admin.component.html'
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class AdminComponent implements OnInit, OnDestroy {
     currentUser: User;
     currentUserSubscription: Subscription;
     users: User[] = [];
@@ -25,8 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        //this.loadAllUsers();
-        //this.adminButton
+        this.loadAllUsers();
     }
 
     ngOnDestroy() {
@@ -45,9 +42,4 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.users = users;
         });
     }
-
-    // private adminButton() {
-    //     if (currentUser.user.username !== 'administrator') {
-    // }
-
 }

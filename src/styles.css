@@ -8,7 +8,7 @@ body {
 body { 
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
-    background-image: url("./assets/fridge.jpg");
+    /* background-image: url("./assets/fridge.jpg"); */
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
@@ -18,7 +18,7 @@ body {
     background-color: lightgreen;
     justify-content: space-between;
     font-size: 1.2rem;
-    height:15vh;
+    height:12vh;
     top:0;
     position: fixed;
     overflow: hidden;
