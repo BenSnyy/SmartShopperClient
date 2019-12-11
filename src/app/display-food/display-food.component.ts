@@ -21,36 +21,37 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   constructor(
     private authenticationService: AuthenticationService,
     private dbService: DatabaseService,
-<<<<<<< HEAD
-    private foodService: FoodService,
-=======
->>>>>>> b63d49ee22ae7bb60f6fcc1686fc6597521fdb11
   ) { }
 
   ngOnInit() {
       this.getFoods();
+      //this.findFood();
   }
 
-<<<<<<< HEAD
+  // findFood() {
+  //   this.dbService.getFood().subscribe(foods => {
+  //     this.foods = foods;
+  //     this.food.reverse();
+  //   })
+  // }
+
   getFoods() {
-=======
-  private loadAllFoods() {
->>>>>>> b63d49ee22ae7bb60f6fcc1686fc6597521fdb11
     this.dbService.getFood().pipe(first()).subscribe(foods => {
         this.foods = foods;
     });
   }
 
   deleteFood(id: number) {
-<<<<<<< HEAD
-    this.dbService.delete(id).pipe(first()).subscribe(() => {
-        this.getFoods();
-=======
     this.dbService.deleteFood(id).pipe(first()).subscribe(() => {
-        this.loadAllFoods();
->>>>>>> b63d49ee22ae7bb60f6fcc1686fc6597521fdb11
+        this.getFoods();
     })
   }
+
+  // updateFood(id:number) {
+  //   this.dbService.updateFood(id).pipe(first()).subscribe(() => {
+
+  //   })
+  // }
 
   @Input() set food(food:any) { //this will receive the value of food
     this._food = food;
