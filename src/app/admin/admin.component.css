@@ -1,0 +1,24 @@
+#loginForm {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20vw;
+    margin-top:15vh;
+}
+
+.overlay{
+    opacity:0.85;
+    background-color: lightgreen;
+    width:25vw;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+li {
+    text-align: left;
+}
