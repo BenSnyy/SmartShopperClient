@@ -19,20 +19,12 @@ export class CreateShoppingComponent implements OnInit {
       quantity: new FormControl(),
       brand: new FormControl()
     })
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e67b26c77504c32a613c0dc4531acf5d36ebac
     this.findShopping();
   }
-
+  
   onCreateShopping() : void {
     this.shopping.unshift(this.createShopping.value)
-<<<<<<< HEAD
     this.dbService.makeShopping(this.shopping[0]).subscribe(Shopping => this.shopping[0] = Shopping)
-=======
-    this.dbService.makeShopping(this.shopping[0]).subscribe(Shopping => this.shopping[''] = Shopping)
->>>>>>> f8e67b26c77504c32a613c0dc4531acf5d36ebac
   }
 
   findShopping() : void {

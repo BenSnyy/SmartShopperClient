@@ -15,11 +15,13 @@ h2 {
 }
 
 .overlay{
-    opacity:0.85;
     background-color: whitesmoke;
     width:100%;
     height:100%;
     top:0px;
     left:0px;
-    z-index:1000;
+}
+
+#ourM, #whyUs {
+    text-align: justify;
 }
