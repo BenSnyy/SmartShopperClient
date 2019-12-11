@@ -30,8 +30,7 @@ export class CreateFoodComponent implements OnInit {
     this.findFood();
   }
 
-  onCreateFood() : void {
-    //             void(is used after functions that doesn't return a value)        
+  onCreateFood() : void {       
     this.food.unshift(this.createFood.value)
     this.dbService.makeFood(this.food[0]).subscribe(Food => {console.log(Food)
     this.food[''] = Food})

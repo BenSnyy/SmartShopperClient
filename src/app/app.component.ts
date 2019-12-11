@@ -7,7 +7,7 @@ import { User } from './_models';
 @Component({ selector: 'app', templateUrl: 'app.component.html' })
 export class AppComponent {
     currentUser: User;
-    adminButton: Boolean = true;
+    adminButton: Boolean = false;
 
     constructor(
         private router: Router,
@@ -17,7 +17,8 @@ export class AppComponent {
     }
 
     // adminButtoFn() {
-    //     if ({{currentUser.user.username}} === 'administrator') {
+    //     if (this.currentUser === 'administrator') {
+    //         console.log(this.currentUser.username)
     //         return false;
     //     } else {
     //         return true;

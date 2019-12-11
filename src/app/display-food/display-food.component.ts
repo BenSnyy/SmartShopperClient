@@ -31,19 +31,26 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
     this.foodService.getAll().pipe(first()).subscribe(foods => {
         this.foods = foods;
     });
-}
+  }
+
+  deleteFood(id: number) {
+    this.foodService.delete(id).pipe(first()).subscribe(() => {
+        this.loadAllFoods();
+    })
+  }
+
 
   @Input() set food(food:any) { //this will receive the value of food
     this._food = food;
   }
 
-  get food() : any { //this will fetch the food we stored in _food
-  return this._food;
-  }
+  // get food() : any { //this will fetch the food we stored in _food
+  // return this._food;
+  // }
 
-  delete(_id: number) {
-    this.food = this.food.delete[this.food.id];
-    console.log(this._food)
-    console.log(this.food)
-  }
+  // delete(_id: number) {
+  //   this.food = this.food.delete[this.food.id];
+  //   console.log(this._food)
+  //   console.log(this.food)
+  // }
 }
