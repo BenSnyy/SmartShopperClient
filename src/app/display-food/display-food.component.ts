@@ -36,7 +36,7 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   deleteFood(id: number) {
     this.dbService.deleteFood(id).pipe(first()).subscribe(() => {
         this.loadAllFoods();
-    })
+    });
   }
 
   @Input() set food(food:any) { //this will receive the value of food
@@ -45,11 +45,5 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
 
   // get food() : any { //this will fetch the food we stored in _food
   // return this._food;
-  // }
-
-  // delete(_id: number) {
-  //   this.food = this.food.delete[this.food.id];
-  //   console.log(this._food)
-  //   console.log(this.food)
   // }
 }
