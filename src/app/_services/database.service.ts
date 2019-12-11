@@ -40,14 +40,17 @@ export class DatabaseService {
   }
 
 //Deletes
-  deleteFood(id: number) {
+  deleteFood(id: number) : Observable<Food[]> {
     return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`);
-    //this.http(injected in the constructor)  
   }
 
-  deleteShop(id: number) {
-    return this.http.delete<Shopping[]>(`${environment.apiUrl}/shopping/delete/${id}`);
-    //this.http(injected in the constructor)  
+  deleteShop(id: number) : Observable<Shopping[]> {
+    return this.http.delete<Shopping[]>(`${environment.apiUrl}/shopping/delete/${id}`); 
+  }
+
+//Edit or Update
+  editFood(id: number) {
+
   }
 
   // eraseFood(food: Food) : Observable<Food[]> {

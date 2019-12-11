@@ -19,7 +19,7 @@ export class DisplayShoppingComponent implements OnInit {
 
   constructor(
     private authenticationService: AuthenticationService,
-    private dbService: DatabaseService,
+    private dbService: DatabaseService
   ) { }
 
   ngOnInit() {
