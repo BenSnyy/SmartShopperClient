@@ -9,14 +9,14 @@ export class FoodService {
     constructor(private http: HttpClient) { }
 
     getAll() {
-        return this.http.get<Food[]>(`${environment.apiUrl}/getall`);
+        return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`);
     }
 
     //register(user: User) {
     //    return this.http.post(`${environment.apiUrl}/users/register`, user);
     //}
 
-    //delete(id: number) {
-    //    return this.http.delete(`${environment.apiUrl}/users/${id}`);
-    //}
+    delete(id: number) {
+        return this.http.delete(`${environment.apiUrl}/food/delete/${id}`);
+    }
 }
