@@ -4,7 +4,8 @@
             <h1>{{_shopping.food}}</h1>
             <p>Quantity: {{_shopping.quantity}}</p>
             <p>Brand: {{_shopping.brand}}</p>
-            <button mat-button id="editButton">Update</button><button mat-button id="deleteButton">Delete</button>
+            <button mat-button id="editButton">Update</button>
+            <button (click)="deleteShop(_shopping.id)" mat-button id="deleteButton">Delete</button>
         </div>
     </div>
 </div>
