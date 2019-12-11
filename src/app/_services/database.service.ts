@@ -49,10 +49,12 @@ export class DatabaseService {
   }
 
 //Edit or Update
-  editFood(id: number) {
-
-  }
+  // editFood(id: number) {
+  //   return this.http.update(`${environment.apiUrl}/shopping/delete/${id}`); 
+  // }
 
   // eraseFood(food: Food) : Observable<Food[]> {
   //   return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`, httpOptions)
   // }
+
+}

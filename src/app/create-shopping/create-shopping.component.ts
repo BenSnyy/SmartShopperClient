@@ -24,7 +24,7 @@ export class CreateShoppingComponent implements OnInit {
   
   onCreateShopping() : void {
     this.shopping.unshift(this.createShopping.value)
-    this.dbService.makeShopping(this.shopping[0]).subscribe(Shopping => this.shopping[0] = Shopping)
+    this.dbService.makeShopping(this.shopping[0]).subscribe(Shopping => this.shopping[''] = Shopping)
   }
 
   findShopping() : void {
