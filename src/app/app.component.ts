@@ -7,7 +7,7 @@ import { User } from './_models';
 @Component({ selector: 'app', templateUrl: 'app.component.html' })
 export class AppComponent {
     currentUser: User;
-    adminButton: Boolean = false;
+    //adminButton: Boolean = true;
 
     constructor(
         private router: Router,
@@ -16,17 +16,17 @@ export class AppComponent {
         this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
     }
 
-    // adminButtoFn() {
-    //     if (this.currentUser === 'administrator') {
-    //         console.log(this.currentUser.username)
-    //         return false;
-    //     } else {
-    //         return true;
-    //     }
-    // } 
-
     logout() {
         this.authenticationService.logout();
         this.router.navigate(['/login']);
     }
+
+    adminButton() {
+        if (this.currentUser !== null && this.currentUser.username === 'administrator') {
+            return false;
+        } else {
+            return true;
+        }
+    } 
+
 }

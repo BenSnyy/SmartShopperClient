@@ -24,10 +24,18 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   ) { }
 
   ngOnInit() {
-      this.loadAllFoods();
+      this.getFoods();
+      //this.findFood();
   }
 
-  private loadAllFoods() {
+  // findFood() {
+  //   this.dbService.getFood().subscribe(foods => {
+  //     this.foods = foods;
+  //     this.food.reverse();
+  //   })
+  // }
+
+  getFoods() {
     this.dbService.getFood().pipe(first()).subscribe(foods => {
         this.foods = foods;
     });
@@ -38,6 +46,12 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
         this.loadAllFoods();
     });
   }
+
+  // updateFood(id:number) {
+  //   this.dbService.updateFood(id).pipe(first()).subscribe(() => {
+
+  //   })
+  // }
 
   @Input() set food(food:any) { //this will receive the value of food
     this._food = food;
