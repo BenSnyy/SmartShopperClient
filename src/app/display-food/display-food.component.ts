@@ -6,6 +6,7 @@ import { first } from 'rxjs/operators';
 import { Food } from '../_models/food.model';
 import { AuthenticationService } from '../_services';
 import { FoodService } from '../_services/food.service';
+import { DatabaseService } from '../_services/database.service';
 
 @Component({
   selector: 'app-display-food',
@@ -20,25 +21,25 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
 
   constructor(
     private authenticationService: AuthenticationService,
+    private dbService: DatabaseService,
     private foodService: FoodService,
   ) { }
 
   ngOnInit() {
-      this.loadAllFoods();
+      this.getFoods();
   }
 
-  private loadAllFoods() {
-    this.foodService.getAll().pipe(first()).subscribe(foods => {
+  getFoods() {
+    this.dbService.getFood().pipe(first()).subscribe(foods => {
         this.foods = foods;
     });
   }
 
   deleteFood(id: number) {
-    this.foodService.delete(id).pipe(first()).subscribe(() => {
-        this.loadAllFoods();
+    this.dbService.delete(id).pipe(first()).subscribe(() => {
+        this.getFoods();
     })
   }
-
 
   @Input() set food(food:any) { //this will receive the value of food
     this._food = food;
