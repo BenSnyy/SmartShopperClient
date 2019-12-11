@@ -1,5 +1,6 @@
-<br><br><br><br><br>
-<h2>Login</h2>
+<div class="overlay">
+<div id="loginForm">
+<h2>Welcome Back! Please Log In:</h2>
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="username">Username</label>
@@ -22,3 +23,6 @@
         </button>
         <a routerLink="/register" class="btn btn-link">Register</a>
     </div>
+</form>
+</div>
+</div>

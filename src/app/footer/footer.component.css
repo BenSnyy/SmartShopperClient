@@ -4,7 +4,15 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: lightgreen;
+
+}
+
+p {
     color: black;
     text-align: center;
     padding: .75%;
+    width:20vw;
+    margin: 0 auto
 }
+
+
