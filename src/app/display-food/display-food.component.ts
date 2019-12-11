@@ -43,7 +43,7 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
 
   deleteFood(id: number) {
     this.dbService.deleteFood(id).pipe(first()).subscribe(() => {
-        this.loadAllFoods();
+        this.getFoods();
     });
   }
 
