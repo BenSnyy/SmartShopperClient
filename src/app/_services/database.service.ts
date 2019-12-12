@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { environment } from 'src/environments/environment';
 import { Food } from '../_models/food.model';
 import { Shopping } from '../_models/shopping.model';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -21,7 +22,7 @@ export class DatabaseService {
 
 //GETS
   getFood() : Observable<Food[]> {
-    return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`)
+    return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`) 
   }
 
   getShopping() : Observable<Shopping[]> {
