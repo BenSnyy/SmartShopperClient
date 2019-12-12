@@ -25,15 +25,13 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
 
   ngOnInit() {
       this.getFoods();
-      //this.findFood();
   }
 
-  // findFood() {
-  //   this.dbService.getFood().subscribe(foods => {
-  //     this.foods = foods;
-  //     this.food.reverse();
-  //   })
-  // }
+  deleteFood(id: number) {
+      this.dbService.deleteFood(id).pipe(first()).subscribe(() => {
+          this.getFoods();
+      });
+  }
 
   getFoods() {
     this.dbService.getFood().pipe(first()).subscribe(foods => {
@@ -41,11 +39,6 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
     });
   }
 
-  deleteFood(id: number) {
-    this.dbService.deleteFood(id).pipe(first()).subscribe(() => {
-        this.getFoods();
-    });
-  }
 
   // updateFood(id:number) {
   //   this.dbService.updateFood(id).pipe(first()).subscribe(() => {
@@ -54,10 +47,17 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   // }
 
   @Input() set food(food:any) { //this will receive the value of food
+    //console.log(this._food)
     this._food = food;
   }
 
-  // get food() : any { //this will fetch the food we stored in _food
-  // return this._food;
+  get food() : any { //this will fetch the food we stored in _food
+  return this._food;
+  }
+
+  // delete(_id: number) {
+  //   this.food = this.food.delete[this.food.id];
+  //   console.log(this._food)
+  //   console.log(this.food)
   // }
 }
