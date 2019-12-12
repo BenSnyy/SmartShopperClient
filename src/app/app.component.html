@@ -1,8 +1,8 @@
 
 <!-- nav -->
     <mat-toolbar class="navbar" id="navbar">
-        <div class="logoTitle">Smart Shopper</div>
-        <div>            
+        <img src="../assets/smartshopperlogo.png" id="logopic"> 
+        <div>                
             <button id="navbutton" routerLink='/admin' routerLinkActive='active' mat-raised-button
                 *ngIf="currentUser !== null && currentUser.user.username === 'administrator'" >Administrator</button>
             <button id="navbutton" routerLink='/about' routerLinkActive='active' mat-raised-button>About Smart Shopper</button>
@@ -16,6 +16,7 @@
     <div>
         <router-outlet></router-outlet>
     </div>    
+
 <!-- <app-home></app-home> -->
 <!-- <app-signup></app-signup> -->
 <!-- <router-outlet></router-outlet> -->

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { DatabaseService } from '../_services/database.service';
-
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms'
+import { DatabaseService } from '../_services/database.service'
 
 @Component({
   selector: 'app-create-shopping',
@@ -9,7 +8,6 @@ import { DatabaseService } from '../_services/database.service';
   styleUrls: ['./create-shopping.component.css']
 })
 export class CreateShoppingComponent implements OnInit {
-
   createShopping: FormGroup;
   shopping = [];
 
@@ -23,7 +21,7 @@ export class CreateShoppingComponent implements OnInit {
     })
     this.findShopping();
   }
-
+  
   onCreateShopping() : void {
     this.shopping.unshift(this.createShopping.value)
     this.dbService.makeShopping(this.shopping[0]).subscribe(Shopping => this.shopping[''] = Shopping)

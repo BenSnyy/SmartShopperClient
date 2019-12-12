@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core'
 import { Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
-
 import { Shopping } from '../_models/shopping.model';
 import { AuthenticationService } from '../_services';
 import { DatabaseService } from '../_services/database.service';
@@ -19,7 +18,7 @@ export class DisplayShoppingComponent implements OnInit {
 
   constructor(
     private authenticationService: AuthenticationService,
-    private dbService: DatabaseService,
+    private dbService: DatabaseService
   ) { }
 
   ngOnInit() {

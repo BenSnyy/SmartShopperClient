@@ -39,7 +39,7 @@ export class DatabaseService {
   }
 
 //Deletes
-  deleteFood(id: number) {
+  deleteFood(id: number) : Observable<Food[]> {
     return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`);
   }
 
@@ -48,7 +48,15 @@ export class DatabaseService {
   }
 
   // updateFood(id: number) {
-  //   return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, food, httpOptions);
+  //   return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, food, httpOptions)
+
+//Edit or Update
+  // editFood(id: number) {
+  //   return this.http.update(`${environment.apiUrl}/shopping/delete/${id}`); 
+  // }
+
+  // eraseFood(food: Food) : Observable<Food[]> {
+  //   return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`, httpOptions)
   // }
 
 }
