@@ -32,7 +32,7 @@ import { CreateShoppingComponent } from './create-shopping/create-shopping.compo
 import { DisplayShoppingComponent } from './display-shopping/display-shopping.component';
 import { DatabaseService } from './_services/database.service';
 import { AdminComponent } from './admin/admin.component';
-import { FoodSearchComponent } from './food-search/food-search.component';
+// import { FoodSearchComponent } from './food-search/food-search.component';
 
 const material = [
   MatButtonToggleModule, MatIconModule, MatBadgeModule, MatProgressSpinnerModule, MatToolbarModule, MatButtonModule
@@ -63,7 +63,7 @@ const material = [
         CreateShoppingComponent,
         DisplayShoppingComponent,
         AdminComponent,
-        FoodSearchComponent
+        // FoodSearchComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

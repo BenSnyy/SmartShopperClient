@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { environment } from 'src/environments/environment';
 import { Food } from '../_models/food.model';
 import { Shopping } from '../_models/shopping.model';
 import { Observable, of } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { tap } from 'rxjs/internal/operators/tap';
 import { catchError } from 'rxjs/operators';
 
@@ -23,7 +24,7 @@ export class DatabaseService {
 
 //GETS
   getFood() : Observable<Food[]> {
-    return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`)
+    return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`) 
   }
 
   getShopping() : Observable<Shopping[]> {
@@ -49,41 +50,41 @@ export class DatabaseService {
   }
 
 
-  searchFood(term: string): Observable<Food[]> {
-    if (!term.trim()) {
-      // if not search term, return empty array.
-      return of([]);
-    }
-    return this.http.get<Food[]>(`${environment.apiUrl}/food/getall/${term}`).pipe(
-      tap(_ => (`found matching "${term}"`)),
-      catchError(this.handleError<Food[]>('searchFoods', []))
-    );
-  }
-
-  // updateFood(id: number) {
-  //   return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, food, httpOptions)
-
-//Edit or Update
-  // editFood(id: number) {
-  //   return this.http.update(`${environment.apiUrl}/shopping/delete/${id}`); 
-  // }
-
-  // eraseFood(food: Food) : Observable<Food[]> {
-  //   return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`, httpOptions)
-  // }
   
-  private handleError<T> (operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
+  // updateFood(id: number) {
+    //   return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, food, httpOptions)
+    
+    //Edit or Update
+    // editFood(id: number) {
+      //   return this.http.update(`${environment.apiUrl}/shopping/delete/${id}`); 
+      // }
+      
+      // eraseFood(food: Food) : Observable<Food[]> {
+        //   return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`, httpOptions)
+        // }
+        
+  // searchFood(term: string): Observable<Food[]> {
+  //   if (!term.trim()) {
+  //     // if not search term, return empty array.
+  //     return of([]);
+  //   }
+  //   return this.http.get<Food[]>(`${environment.apiUrl}/food/getall/${term}`).pipe(
+  //     tap(_ => (`found matching "${term}"`)),
+  //     catchError(this.handleError<Food[]>('searchFoods', []))
+  //   );
+  // }
+  // private handleError<T> (operation = 'operation', result?: T) {
+  //   return (error: any): Observable<T> => {
 
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
+  //     // TODO: send the error to remote logging infrastructure
+  //     console.error(error); // log to console instead
 
-      // TODO: better job of transforming error for user consumption
-      // this.log(`${operation} failed: ${error.message}`);
+  //     // TODO: better job of transforming error for user consumption
+  //     // this.log(`${operation} failed: ${error.message}`);
 
-      // Let the app keep running by returning an empty result.
-      return of(result as T);
-    };
-  }
+  //     // Let the app keep running by returning an empty result.
+  //     return of(result as T);
+  //   };
+  // }
 
 }
