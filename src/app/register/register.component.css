@@ -1,0 +1,30 @@
+#registerForm {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30vw;
+    margin-top:15vh;
+    padding-top:10px;
+}
+
+.overlay{
+    opacity:0.85;
+    background-color: #4f9da6;
+    width:35vw;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#loginbutton {
+    background-color: #103766;
+}
+
+#registerlink {
+    color:#103766;
+
+}

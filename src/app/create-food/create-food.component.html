@@ -26,6 +26,7 @@
         type="date"
         name="expiration"
     >
+    
 
     <label for="brand">Brand</label>
     <input
@@ -33,7 +34,6 @@
         type="text"
         name="brand"
     >
-
 
     <button type="submit">Add</button>
 </form>
@@ -45,4 +45,18 @@
     *ngFor="let food of food"
     [food]="food"
     ></app-display-food>
+    <!-- <div class="deck">
+        <div class="card">
+            <div class="cardContainer" 
+            *ngFor="let food of food"
+            [food]="food">
+                <h1>{{food.food}}</h1>
+                <p>Quanity: {{food.quantity}}</p>
+                <p>Exp: {{food.expiration}}</p>
+                <p>Brand: {{food.brand}}</p>
+                <button (click)="editFood()" mat-button id="editButton">Update</button><button (click)="delete()" mat-button id="deleteButton">Delete</button>
+            </div>
+        </div>
+    </div> -->
 </div>
+<!-- <app-food-search></app-food-search> -->

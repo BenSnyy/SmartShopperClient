@@ -1,0 +1,22 @@
+<div class="overlay">
+    <div id="loginForm">
+        <h1>Hi {{currentUser.user.firstName}} {{currentUser.user.lastName}}!!</h1>
+        <h3>All registered users:</h3>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Admin Status</th>
+                <th>Delete?</th>
+            </tr>
+            <tr *ngFor="let user of users">
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.adminStatus}}</td>
+                <td><a (click)="deleteUser(user.id)" id="deletebtn">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+</div>

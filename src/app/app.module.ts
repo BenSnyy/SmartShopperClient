@@ -19,10 +19,6 @@ import { HeaderComponent } from './header/header.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-// used to create fake backend
-//import { fakeBackendProvider } from './_helpers';
-
-import { appRoutingModule } from './app.routing';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
@@ -35,6 +31,8 @@ import { DisplayFoodComponent } from './display-food/display-food.component';
 import { CreateShoppingComponent } from './create-shopping/create-shopping.component';
 import { DisplayShoppingComponent } from './display-shopping/display-shopping.component';
 import { DatabaseService } from './_services/database.service';
+import { AdminComponent } from './admin/admin.component';
+// import { FoodSearchComponent } from './food-search/food-search.component';
 
 const material = [
   MatButtonToggleModule, MatIconModule, MatBadgeModule, MatProgressSpinnerModule, MatToolbarModule, MatButtonModule
@@ -45,11 +43,9 @@ const material = [
         BrowserModule,
         HttpClientModule,
         ReactiveFormsModule,
-        appRoutingModule,
         AppRoutingModule,
         FormsModule,
         RouterModule,
-        AppRoutingModule,
         material,
     ],
     declarations: [
@@ -65,7 +61,9 @@ const material = [
         CreateFoodComponent,
         DisplayFoodComponent,
         CreateShoppingComponent,
-        DisplayShoppingComponent
+        DisplayShoppingComponent,
+        AdminComponent,
+        // FoodSearchComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

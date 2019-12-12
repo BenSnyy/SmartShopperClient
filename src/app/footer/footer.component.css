@@ -3,8 +3,17 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: lightgreen;
+    background-color: #4f9da6;
+
+}
+
+p {
     color: black;
     text-align: center;
     padding: .75%;
+    width:20vw;
+    margin: 0 auto
 }
+
+
+

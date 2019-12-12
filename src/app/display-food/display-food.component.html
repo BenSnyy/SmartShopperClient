@@ -2,10 +2,11 @@
     <div class="card">
         <div class="cardContainer">
             <h1>{{_food.food}}</h1>
-            <p>Quanity: {{_food.quantity}}</p>
+            <p>Quantity: {{_food.quantity}}</p>
             <p>Exp: {{_food.expiration}}</p>
             <p>Brand: {{_food.brand}}</p>
-            <button mat-button id="editButton">Update</button><button mat-button id="deleteButton">Delete</button>
+            <button (click)="editFood(_food.id)" mat-button id="editButton">Update</button>
+            <button (click)="deleteFood(_food.id)" mat-button id="deleteButton">Delete</button>
         </div>
     </div>
 </div>
