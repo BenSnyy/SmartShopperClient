@@ -33,12 +33,9 @@ import { DisplayShoppingComponent } from './display-shopping/display-shopping.co
 import { DatabaseService } from './_services/database.service';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateFoodComponent } from './update-food/update-food.component';
-<<<<<<< HEAD
-=======
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UpdateShoppingComponent } from './update-shopping/update-shopping.component'
 
->>>>>>> 5dea41ef2f0aff52512caeedeff7eacf8e0cda8d
 // import { FoodSearchComponent } from './food-search/food-search.component';
 
 const material = [
@@ -72,10 +69,7 @@ const material = [
         DisplayShoppingComponent,
         AdminComponent,
         UpdateFoodComponent,
-<<<<<<< HEAD
-=======
         UpdateShoppingComponent,
->>>>>>> 5dea41ef2f0aff52512caeedeff7eacf8e0cda8d
         // FoodSearchComponent
     ],
     providers: [

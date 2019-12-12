@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
 import {NgbModal, ModalDismissReasons, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
->>>>>>> 5dea41ef2f0aff52512caeedeff7eacf8e0cda8d
 
 @Component({
   selector: 'app-update-food',
@@ -11,10 +8,6 @@ import {NgbModal, ModalDismissReasons, NgbActiveModal} from '@ng-bootstrap/ng-bo
   styleUrls: ['./update-food.component.css']
 })
 export class UpdateFoodComponent implements OnInit {
-<<<<<<< HEAD
-
-  constructor() { }
-=======
   closeResult: string;
   
 
@@ -42,7 +35,6 @@ export class UpdateFoodComponent implements OnInit {
     }
   }
 
->>>>>>> 5dea41ef2f0aff52512caeedeff7eacf8e0cda8d
 
   ngOnInit() {
   }
