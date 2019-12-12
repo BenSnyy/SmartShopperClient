@@ -32,7 +32,8 @@ export class DisplayShoppingComponent implements OnInit {
 
   deleteShop(id: number) {
     this.dbService.deleteShop(id).pipe(first()).subscribe(() => {
-        this.loadAllShops();
+      location.reload();
+      this.loadAllShops();
     })
   }
 

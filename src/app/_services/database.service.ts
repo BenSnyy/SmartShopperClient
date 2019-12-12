@@ -4,7 +4,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Food } from '../_models/food.model';
 import { Shopping } from '../_models/shopping.model';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/internal/operators/tap';
+import { catchError } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -47,16 +49,42 @@ export class DatabaseService {
     return this.http.delete<Shopping[]>(`${environment.apiUrl}/shopping/delete/${id}`);
   }
 
+
+  
   // updateFood(id: number) {
-  //   return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, food, httpOptions)
-
-//Edit or Update
-  // editFood(id: number) {
-  //   return this.http.update(`${environment.apiUrl}/shopping/delete/${id}`); 
+    //   return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, food, httpOptions)
+    
+    //Edit or Update
+    // editFood(id: number) {
+      //   return this.http.update(`${environment.apiUrl}/shopping/delete/${id}`); 
+      // }
+      
+      // eraseFood(food: Food) : Observable<Food[]> {
+        //   return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`, httpOptions)
+        // }
+        
+  // searchFood(term: string): Observable<Food[]> {
+  //   if (!term.trim()) {
+  //     // if not search term, return empty array.
+  //     return of([]);
+  //   }
+  //   return this.http.get<Food[]>(`${environment.apiUrl}/food/getall/${term}`).pipe(
+  //     tap(_ => (`found matching "${term}"`)),
+  //     catchError(this.handleError<Food[]>('searchFoods', []))
+  //   );
   // }
+  // private handleError<T> (operation = 'operation', result?: T) {
+  //   return (error: any): Observable<T> => {
 
-  // eraseFood(food: Food) : Observable<Food[]> {
-  //   return this.http.delete<Food[]>(`${environment.apiUrl}/food/delete/${id}`, httpOptions)
+  //     // TODO: send the error to remote logging infrastructure
+  //     console.error(error); // log to console instead
+
+  //     // TODO: better job of transforming error for user consumption
+  //     // this.log(`${operation} failed: ${error.message}`);
+
+  //     // Let the app keep running by returning an empty result.
+  //     return of(result as T);
+  //   };
   // }
 
 }

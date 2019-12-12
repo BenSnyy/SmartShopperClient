@@ -29,12 +29,13 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
 
   deleteFood(id: number) {
       this.dbService.deleteFood(id).pipe(first()).subscribe(() => {
-          this.getFoods();
+        location.reload();
+        this.getFoods();
       });
   }
 
   getFoods() {
-    this.dbService.getFood().pipe(first()).subscribe(foods => {
+    this.dbService.getFood().pipe<Food[]>(first()).subscribe(foods => {
         this.foods = foods;
     });
   }
