@@ -4,10 +4,11 @@
         <img src="../assets/smartshopperlogo.png" id="logopic"> 
         <div>                
             <button id="navbutton" routerLink='/admin' routerLinkActive='active' mat-raised-button
-                *ngIf="currentUser !== null && currentUser.user.username === 'administrator'" >Administrator</button>
+                *ngIf="currentUser !== null && currentUser.user.adminStatus === true" >Administrator</button>
             <button id="navbutton" routerLink='/about' routerLinkActive='active' mat-raised-button>About Smart Shopper</button>
             <button id="navbutton" routerLink='/food' routerLinkActive='active' mat-raised-button>My Groceries</button>
             <button id="navbutton" routerLink='/shopping' routerLinkActive='active' mat-raised-button>Shopping List</button>
+            <button id="navbutton" routerLink='/' mat-raised-button>Login</button>
             <button id="navbutton" routerLink='/' (click)="logout()" mat-raised-button>Logout</button>
         </div>
     </mat-toolbar>
