@@ -32,6 +32,10 @@ import { CreateShoppingComponent } from './create-shopping/create-shopping.compo
 import { DisplayShoppingComponent } from './display-shopping/display-shopping.component';
 import { DatabaseService } from './_services/database.service';
 import { AdminComponent } from './admin/admin.component';
+import { UpdateFoodComponent } from './update-food/update-food.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { UpdateShoppingComponent } from './update-shopping/update-shopping.component'
+
 // import { FoodSearchComponent } from './food-search/food-search.component';
 
 const material = [
@@ -47,6 +51,7 @@ const material = [
         FormsModule,
         RouterModule,
         material,
+        NgbModule
     ],
     declarations: [
         AppComponent,
@@ -63,6 +68,8 @@ const material = [
         CreateShoppingComponent,
         DisplayShoppingComponent,
         AdminComponent,
+        UpdateFoodComponent,
+        UpdateShoppingComponent,
         // FoodSearchComponent
     ],
     providers: [
@@ -72,7 +79,11 @@ const material = [
         DatabaseService,
         HttpClient
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [
+      UpdateFoodComponent,
+      UpdateShoppingComponent
+    ]
   })
 
 export class AppModule { };
