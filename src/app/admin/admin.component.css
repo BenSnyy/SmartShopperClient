@@ -25,7 +25,7 @@ table {
 }
 
 #deletebtn {
-    background-color:red;
+    background-color:rgb(255, 0, 0, 0.7);
     border-radius: 5px;
 }
 
