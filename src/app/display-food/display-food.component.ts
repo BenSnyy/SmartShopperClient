@@ -6,6 +6,8 @@ import { first } from 'rxjs/operators';
 import { Food } from '../_models/food.model';
 import { AuthenticationService } from '../_services';
 import { DatabaseService } from '../_services/database.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UpdateFoodComponent } from '../update-food/update-food.component';
 
 @Component({
   selector: 'app-display-food',
@@ -21,6 +23,7 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   constructor(
     private authenticationService: AuthenticationService,
     private dbService: DatabaseService,
+    private modalService:NgbModal
   ) { }
 
   ngOnInit() {
@@ -40,6 +43,15 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
     });
   }
 
+  openFormModal() {
+    const modalRef = this.modalService.open(UpdateFoodComponent);
+    
+    modalRef.result.then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
 
   // updateFood(id:number) {
   //   this.dbService.updateFood(id).pipe(first()).subscribe(() => {
