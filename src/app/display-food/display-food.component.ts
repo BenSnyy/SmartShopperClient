@@ -34,7 +34,7 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   }
 
   getFoods() {
-    this.dbService.getFood().pipe(first()).subscribe(foods => {
+    this.dbService.getFood().pipe<Food[]>(first()).subscribe(foods => {
         this.foods = foods;
     });
   }
