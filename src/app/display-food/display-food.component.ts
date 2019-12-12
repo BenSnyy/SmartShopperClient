@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core'
+import { Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
 
@@ -27,21 +27,21 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   ) { }
 
   ngOnInit() {
-      this.getFoods();
+      // this.getFoods();
   }
 
   deleteFood(id: number) {
       this.dbService.deleteFood(id).pipe(first()).subscribe(() => {
         location.reload();
-        this.getFoods();
+        // this.getFoods();
       });
   }
 
-  getFoods() {
-    this.dbService.getFood().pipe<Food[]>(first()).subscribe(foods => {
-        this.foods = foods;
-    });
-  }
+  // getFoods() {
+  //   this.dbService.getFood().pipe<Food[]>(first()).subscribe(foods => {
+  //       this.foods = foods;
+  //   });
+  // }
 
   openFormModal() {
     const modalRef = this.modalService.open(UpdateFoodComponent);

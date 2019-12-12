@@ -24,20 +24,20 @@ export class DatabaseService {
 
 //GETS
   getFood() : Observable<Food[]> {
-    return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`) 
+    return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`);
   }
 
   getShopping() : Observable<Shopping[]> {
-    return this.http.get<Shopping[]>(`${environment.apiUrl}/shopping/getall`)
+    return this.http.get<Shopping[]>(`${environment.apiUrl}/shopping/getall`);
   }
 
 //Create or Make
   makeFood(food: Food) : Observable<Food[]> {
-    return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food, httpOptions)
+    return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food, httpOptions);
   }
 
   makeShopping(shopping: Shopping) : Observable<Shopping[]> {
-    return this.http.post<Shopping[]>(`${environment.apiUrl}/shopping/create`, shopping, httpOptions)
+    return this.http.post<Shopping[]>(`${environment.apiUrl}/shopping/create`, shopping, httpOptions);
   }
 
 //Deletes
