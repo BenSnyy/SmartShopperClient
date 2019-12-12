@@ -32,6 +32,7 @@ import { CreateShoppingComponent } from './create-shopping/create-shopping.compo
 import { DisplayShoppingComponent } from './display-shopping/display-shopping.component';
 import { DatabaseService } from './_services/database.service';
 import { AdminComponent } from './admin/admin.component';
+import { UpdateFoodComponent } from './update-food/update-food.component';
 // import { FoodSearchComponent } from './food-search/food-search.component';
 
 const material = [
@@ -63,6 +64,7 @@ const material = [
         CreateShoppingComponent,
         DisplayShoppingComponent,
         AdminComponent,
+        UpdateFoodComponent,
         // FoodSearchComponent
     ],
     providers: [
