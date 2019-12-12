@@ -10,8 +10,11 @@ h2 {
 }
 
 #aboutP {
-    margin-left: 160px;
+    margin-left: 80px;
     width: 30vw;
+}
+#textArea {
+    margin-right:95px;
 }
 
 .overlay{

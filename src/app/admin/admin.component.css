@@ -3,14 +3,14 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 20vw;
+    width: 40vw;
     margin-top:15vh;
 }
 
 .overlay{
     opacity:0.85;
     background-color: #4f9da6;
-    width:25vw;
+    width:50vw;
     height:100%;
     top:0px;
     left:0px;
@@ -19,6 +19,21 @@
     border-radius: 10px;
 }
 
-li {
+table {
     text-align: left;
+    font-size: 18px;
+}
+
+#deletebtn {
+    background-color:red;
+    border-radius: 5px;
+}
+
+a{
+    color:black;
+    padding:4px;
+}
+
+td {
+    padding-bottom: 10px;
 }
