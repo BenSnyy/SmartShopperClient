@@ -19,14 +19,21 @@
     border-radius: 10px;
 }
 
-table {
+#usertable {
     text-align: left;
     font-size: 18px;
+    background-color:whitesmoke;
+    border-radius:5px;
+    margin-bottom: 20px;
+    padding-left:30px;
 }
 
 #deletebtn {
-    background-color:red;
+    background-color:rgb(255, 0, 0, 0.7);
     border-radius: 5px;
+}
+#deletebtn:hover {
+    box-shadow: 0.2em 0.2em 0.5em rgb(0, 0, 0, 0.5);
 }
 
 a{
@@ -36,4 +43,10 @@ a{
 
 td {
     padding-bottom: 10px;
+    padding-left: 12px;
+}
+th {
+    padding-left: 12px;
+    padding-bottom: 5px;
+    padding-top:5px;
 }

@@ -5,6 +5,8 @@ import { first } from 'rxjs/operators';
 import { Shopping } from '../_models/shopping.model';
 import { AuthenticationService } from '../_services';
 import { DatabaseService } from '../_services/database.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UpdateShoppingComponent } from '../update-shopping/update-shopping.component'
 
 @Component({
   selector: 'app-display-shopping',
@@ -18,7 +20,8 @@ export class DisplayShoppingComponent implements OnInit {
 
   constructor(
     private authenticationService: AuthenticationService,
-    private dbService: DatabaseService
+    private dbService: DatabaseService,
+    private modalService:NgbModal
   ) { }
 
   ngOnInit() {
@@ -35,6 +38,16 @@ export class DisplayShoppingComponent implements OnInit {
       location.reload();
       this.loadAllShops();
     })
+  }
+
+  openFormModal() {
+    const modalRef = this.modalService.open(UpdateShoppingComponent);
+    
+    modalRef.result.then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(error);
+    });
   }
 
   @Input() set shopping(shopping:any) { //this will receive the value of shopping

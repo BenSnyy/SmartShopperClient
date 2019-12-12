@@ -1,22 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
 import {NgbModal, ModalDismissReasons, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
->>>>>>> 5dea41ef2f0aff52512caeedeff7eacf8e0cda8d
 
 @Component({
-  selector: 'app-update-food',
-  templateUrl: './update-food.component.html',
-  styleUrls: ['./update-food.component.css']
+  selector: 'app-update-shopping',
+  templateUrl: './update-shopping.component.html',
+  styleUrls: ['./update-shopping.component.css']
 })
-export class UpdateFoodComponent implements OnInit {
-<<<<<<< HEAD
-
-  constructor() { }
-=======
+export class UpdateShoppingComponent implements OnInit {
   closeResult: string;
-  
 
   constructor(private modalService: NgbModal, public activeModal: NgbActiveModal) { }
 
@@ -41,8 +33,6 @@ export class UpdateFoodComponent implements OnInit {
       return  `with: ${reason}`;
     }
   }
-
->>>>>>> 5dea41ef2f0aff52512caeedeff7eacf8e0cda8d
 
   ngOnInit() {
   }

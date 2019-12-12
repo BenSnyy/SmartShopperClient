@@ -1,28 +1,23 @@
 <div class="modal-header" >
-  <h4 class="modal-title">Update Food</h4>
-  <button type="button" class="close" aria-label="Close"
-      (click)="activeModal.dismiss('Cross click')">
-  </button>
+    <h4 class="modal-title">Update Shopping</h4>
+    <button type="button" class="close" aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')">
+    </button>
 </div>
-
-    
+      
+          
 <form class="modal-body" >
     <label for="food">Food</label>
     <input type="text" name="food" required>
 
     <label for="quantity">Quantity</label>
     <input type="number" name="quantity" required>
-
-    <label for="expiration">Expiration</label>
-    <input type="date" name="expiration">
-
-
+    
     <label for="brand">Brand</label>
     <input type="text" name="brand">
-
 </form>
-
-
+      
+      
 <div class="modal-footer">
-  <button (click)="activeModal.dismiss('Close clicked')">Update</button>
+    <button (click)="activeModal.dismiss('Close clicked')">Update</button>
 </div>
