@@ -3,6 +3,10 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    font-size: 1.8em;
+}
+
 .container {
     padding-top: 17vh;
     opacity:0.99;
@@ -27,4 +31,5 @@ h2 {
 
 #ourM, #whyUs {
     text-align: justify;
+    font-size: 1.15em;
 }

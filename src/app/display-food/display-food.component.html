@@ -5,8 +5,8 @@
             <p>Quantity: {{_food.quantity}}</p>
             <p>Exp: {{_food.expiration}}</p>
             <p>Brand: {{_food.brand}}</p>
-            <button (click)="openFormModal()" mat-button id="editButton">Update</button>
-            <button (click)="deleteFood(_food.id)" mat-button id="deleteButton">Delete</button>
+            <button (click)="openFormModal()" mat-button id="editButton"><mat-icon>create</mat-icon></button>
+            <button (click)="deleteFood(_food.id)" mat-button id="deleteButton"><mat-icon>delete_forever</mat-icon></button>
         </div>
     </div>
 </div>
