@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/internal/operators/tap';
+import { catchError } from 'rxjs/operators';
 
 import { environment } from 'src/environments/environment';
 import { Food } from '../_models/food.model';
 import { Shopping } from '../_models/shopping.model';
-import { Observable, of } from 'rxjs';
-import { tap } from 'rxjs/internal/operators/tap';
-import { catchError } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -22,7 +22,7 @@ export class DatabaseService {
 
   constructor(private http: HttpClient) { }
 
-//GETS
+//Gets
   getFood() : Observable<Food[]> {
     return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`);
   }
@@ -49,11 +49,11 @@ export class DatabaseService {
     return this.http.delete<Shopping[]>(`${environment.apiUrl}/shopping/delete/${id}`);
   }
 
-
+//Updates or Patchs  
+  updateFood(id: number) {
+    return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, httpOptions)
+  } 
   
-  // updateFood(id: number) {
-    //   return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, food, httpOptions)
-    
     //Edit or Update
     // editFood(id: number) {
       //   return this.http.update(`${environment.apiUrl}/shopping/delete/${id}`); 

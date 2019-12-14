@@ -5,24 +5,37 @@
   </button>
 </div>
 
-    
-<form class="modal-body" >
-    <label for="food">Food</label>
-    <input type="text" name="food" required>
-
-    <label for="quantity">Quantity</label>
-    <input type="number" name="quantity" required>
-
-    <label for="expiration">Expiration</label>
-    <input type="date" name="expiration">
-
-
-    <label for="brand">Brand</label>
-    <input type="text" name="brand">
-
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <div class="modal-body">
+    <div class="container">
+      <div class="form-group">
+        <label for="food">Food</label>
+        <input [(ngModel)]="_food.food" 
+          type="text" class="form-control" formControlName="food" required>
+      </div>
+      <div>
+        <label for="quantity">Quantity</label>
+        <input [(ngModel)]="_food.quantity"
+          type="number" class="form-control" formControlName="quantity" required>
+      </div>
+      <div>
+        <label for="expiration">Expiration</label>
+        <input [(ngModel)]="_food.expiration"
+          type="date" class="form-control" formControlName="expiration">
+      </div>
+      <div>
+        <label for="brand">Brand</label>
+        <input [(ngModel)]="_food.brand"
+          type="text" class="form-control" formControlName="brand">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <!-- <button type="submit"  -->
+      <!-- (click)="activeModal.dismiss('Close clicked')" -->
+    <button type="submit"
+      (click)="passBack()"
+      >Update</button>
+  </div>
 </form>
-
-
-<div class="modal-footer">
-  <button (click)="activeModal.dismiss('Close clicked')">Update</button>
-</div>
+  
