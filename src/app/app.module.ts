@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonToggleModule, MatIconModule, MatProgressSpinnerModule, MatToolbarModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component'; 
 import { HeaderComponent } from './header/header.component';
@@ -33,8 +32,10 @@ import { DisplayShoppingComponent } from './display-shopping/display-shopping.co
 import { DatabaseService } from './_services/database.service';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateFoodComponent } from './update-food/update-food.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { UpdateShoppingComponent } from './update-shopping/update-shopping.component'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UpdateShoppingComponent } from './update-shopping/update-shopping.component';
+import { ModalContentComponent } from './modal-content/modal-content.component';
+import { ModalContainerComponent } from './modal-container/modal-container.component'
 
 // import { FoodSearchComponent } from './food-search/food-search.component';
 
@@ -70,6 +71,8 @@ const material = [
         AdminComponent,
         UpdateFoodComponent,
         UpdateShoppingComponent,
+        ModalContentComponent,
+        ModalContainerComponent,
         // FoodSearchComponent
     ],
     providers: [
@@ -82,7 +85,9 @@ const material = [
     bootstrap: [AppComponent],
     entryComponents: [
       UpdateFoodComponent,
-      UpdateShoppingComponent
+      UpdateShoppingComponent,
+      ModalContentComponent,
+      ModalContainerComponent,
     ]
   })
 
