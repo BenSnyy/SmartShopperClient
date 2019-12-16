@@ -91,7 +91,7 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   //   this.dbService.updateFood(id).pipe(first()).subscribe(() => {
 
   updateFood(id:number) {
-    this.dbService.updateFoods(id).pipe(first()).subscribe(() => {
+    this.dbService.updateFood(id).pipe(first()).subscribe(() => {
     })
   }
 

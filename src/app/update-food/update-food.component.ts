@@ -22,6 +22,7 @@ export class UpdateFoodComponent implements OnInit {
   //   owner: new FormControl(), 
   // });
 
+
   @Input() public _food: {
     id: number; 
     food: string; 
@@ -43,13 +44,13 @@ export class UpdateFoodComponent implements OnInit {
     
   ngOnInit() {
     console.log(this._food); //Just for debug
-    
-
-  updateFood(id: number) {
-    this.dbService.updateFood(id).pipe(first()).subscribe(() => {
-      //this.getFoods();
-    });
   }
+
+  // updateFood(id: number) {
+  //   this.dbService.updateFood(id).pipe(first()).subscribe(() => {
+  //     //this.getFoods();
+  //   });
+  // }
         
   closeModal() {
     this.activeModal.close('Modal Closed');
@@ -59,7 +60,5 @@ export class UpdateFoodComponent implements OnInit {
     //this.passEntry.emit(this._food);
     this.activeModal.close(this._food);
   }
-
-}
 
 }
