@@ -58,7 +58,7 @@ export class DatabaseService {
     return this.http.put<Shopping[]>(`${environment.apiUrl}/shopping/update/${id}`, shopping, httpOptions)
   }  
 
-  updateFood(id: number) {
+  updateFoods(id: number) {
     return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, id, httpOptions)
   } 
   
