@@ -51,7 +51,7 @@ export class DatabaseService {
 
 //Updates or Patchs  
   updateFood(id: number) {
-    return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, httpOptions)
+    return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, id, httpOptions)
   } 
   
     //Edit or Update

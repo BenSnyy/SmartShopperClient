@@ -31,35 +31,14 @@ export class UpdateFoodComponent implements OnInit {
     }
     
     
-    
 
 
   updateFood(id: number) {
     this.dbService.updateFood(id).pipe(first()).subscribe(() => {
-    
       //this.getFoods();
     });
   }
 
-<<<<<<< HEAD
-  // open(content) {
-  //   this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-  //     this.closeResult = `Closed with: ${result}`;
-  //   }, (reason) => {
-  //     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-  //   });
-  // }
-
-  // private getDismissReason(reason: any): string {
-  //   if (reason === ModalDismissReasons.ESC) {
-  //     return 'by pressing ESC';
-  //   } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-  //     return 'by clicking on a backdrop';
-  //   } else {
-  //     return  `with: ${reason}`;
-  //   }
-  // }
-=======
   private createForm() {
     this.myForm = this.formBuilder.group({
       id: '',
@@ -73,7 +52,6 @@ export class UpdateFoodComponent implements OnInit {
   private submitForm() {
     this.activeModal.close(this.myForm.value);
   }
->>>>>>> eb2c7e2d293c84518066f2bcd809f1b0cabad201
 
   closeModal() {
     this.activeModal.close('Modal Closed');

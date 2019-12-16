@@ -94,11 +94,11 @@ export class DisplayFoodComponent implements OnInit { //this will store the food
   }
 
 
-  // updateFood(id:number) {
-  //   this.dbService.updateFood(id).pipe(first()).subscribe(() => {
+  updateFood(id:number) {
+    this.dbService.updateFood(id).pipe(first()).subscribe(() => {
 
-  //   })
-  // }
+    })
+  }
 
   @Input() set food(food:any) { //this will receive the value of food
     //console.log(this._food)
