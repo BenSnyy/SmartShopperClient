@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalContentComponent } from './modal-content/modal-content.component';
+//import { ModalContentComponent } from './modal-content/modal-content.component';
 import { UpdateFoodComponent } from './update-food/update-food.component';
 
 import { AuthenticationService } from './_services';

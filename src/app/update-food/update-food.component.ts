@@ -13,55 +13,47 @@ import { DatabaseService } from '../_services/database.service';
 export class UpdateFoodComponent implements OnInit {
   
   closeResult: string;  
-  @Input() public _food;
+  // this.updateForm = new FormGroup({
+  //   id: new FormControl(), 
+  //   food: new FormControl(), 
+  //   quantity: new FormControl(), 
+  //   expiration: new FormControl(), 
+  //   brand: new FormControl(), 
+  //   owner: new FormControl(), 
+  // });
+
+  @Input() public _food: {
+    id: number; 
+    food: string; 
+    quantity: number; 
+    expiration: number; 
+    brand: string; 
+    owner: number; 
+  };
   @Output() passEntry: EventEmitter<any> = new EventEmitter;
-  myForm: FormGroup;
   
   constructor(
     private dbService: DatabaseService,
     private modalService: NgbModal, 
+    private formBuilder: FormBuilder,
     public activeModal: NgbActiveModal,
-    private formBuilder: FormBuilder
     ) {
-      this.createForm();
+      //this.createForm();
     }
     
-    ngOnInit() {
-      console.log(this._food);
-    }
-    
-    
-    
-
-
-  updateFood(id: number) {
-    this.dbService.updateFood(id).pipe(first()).subscribe(() => {
-    
-      //this.getFoods();
-    });
+  ngOnInit() {
+    console.log(this._food); //Just for debug
   }
-
-  private createForm() {
-    this.myForm = this.formBuilder.group({
-      id: '',
-      food: '',
-      quantity: '',
-      expiration: '',
-      brand: '',
-    });
-  }
-
-  private submitForm() {
-    this.activeModal.close(this.myForm.value);
-  }
-
+        
   closeModal() {
     this.activeModal.close('Modal Closed');
   }
 
-  passBack() {
-    this.passEntry.emit(this._food);
+  updateFood() {
+    //this.passEntry.emit(this._food);
     this.activeModal.close(this._food);
   }
 
 }
+
+

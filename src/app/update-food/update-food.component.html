@@ -5,37 +5,34 @@
   </button>
 </div>
 
-<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+<!-- <form [formGroup]="updateForm" (ngSubmit)="submitForm()"> -->
+<form (ngSubmit)="submitForm()">  
   <div class="modal-body">
     <div class="container">
       <div class="form-group">
         <label for="food">Food</label>
-        <input [(ngModel)]="_food.food" 
-          type="text" class="form-control" formControlName="food" required>
+        <!-- <input [(ngModel)]="_food.food" type="text" class="form-control" formControlName="food" required> -->
+        <input [(ngModel)]="_food.food" type="text" class="form-control" name="food">
       </div>
       <div>
         <label for="quantity">Quantity</label>
-        <input [(ngModel)]="_food.quantity"
-          type="number" class="form-control" formControlName="quantity" required>
+        <!-- <input [(ngModel)]="_food.quantity" type="number" class="form-control" formControlName="quantity" required> -->
+        <input [(ngModel)]="_food.quantity" type="number" class="form-control" name="quantity">
       </div>
       <div>
         <label for="expiration">Expiration</label>
-        <input [(ngModel)]="_food.expiration"
-          type="date" class="form-control" formControlName="expiration">
+        <!-- <input [(ngModel)]="_food.expiration" type="date" class="form-control" formControlName="expiration"> -->
+        <input [(ngModel)]="_food.expiration" type="date" class="form-control" name="expiration">
       </div>
       <div>
         <label for="brand">Brand</label>
-        <input [(ngModel)]="_food.brand"
-          type="text" class="form-control" formControlName="brand">
+        <!-- <input [(ngModel)]="_food.brand" type="text" class="form-control" formControlName="brand"> -->
+        <input [(ngModel)]="_food.brand" type="text" class="form-control" name="brand">
       </div>
     </div>
   </div>
   <div class="modal-footer">
-    <!-- <button type="submit"  -->
-      <!-- (click)="activeModal.dismiss('Close clicked')" -->
-    <button type="submit"
-      (click)="passBack()"
-      >Update</button>
+    <button type="submit" (click)="updateFood()">Update</button>
   </div>
 </form>
   
