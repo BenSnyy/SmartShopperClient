@@ -31,12 +31,10 @@ export class UpdateFoodComponent implements OnInit {
     }
     
     
-    
 
 
   updateFood(id: number) {
     this.dbService.updateFood(id).pipe(first()).subscribe(() => {
-    
       //this.getFoods();
     });
   }

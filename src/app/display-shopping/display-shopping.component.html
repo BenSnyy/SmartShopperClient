@@ -4,8 +4,8 @@
             <h1>{{_shopping.food}}</h1>
             <p>Quantity: {{_shopping.quantity}}</p>
             <p>Brand: {{_shopping.brand}}</p>
-            <button (click)="openFormModal()" mat-button id="editButton">Update</button>
-            <button (click)="deleteShop(_shopping.id)" mat-button id="deleteButton">Delete</button>
+            <button (click)="openFormModal()" mat-button id="editButton"><mat-icon>edit</mat-icon></button>
+            <button (click)="deleteShop(_shopping.id)" mat-button id="deleteButton"><mat-icon>delete_forever</mat-icon></button>
         </div>
     </div>
 </div>
