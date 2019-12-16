@@ -1,8 +1,7 @@
+<div id="modal">
 <div class="modal-header" >
   <h4 class="modal-title">Update Food</h4>
-  <button type="button" class="close" aria-label="Close"
-      (click)="activeModal.dismiss('Cross click')">
-  </button>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">X</button>
 </div>
 
 <form [formGroup]="myForm" (ngSubmit)="submitForm()">
@@ -38,4 +37,3 @@
       >Update</button>
   </div>
 </form>
-  
