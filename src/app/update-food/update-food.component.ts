@@ -43,6 +43,12 @@ export class UpdateFoodComponent implements OnInit {
     
   ngOnInit() {
     console.log(this._food); //Just for debug
+    
+
+  updateFood(id: number) {
+    this.dbService.updateFood(id).pipe(first()).subscribe(() => {
+      //this.getFoods();
+    });
   }
         
   closeModal() {

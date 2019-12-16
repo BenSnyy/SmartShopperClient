@@ -36,6 +36,9 @@ import { UpdateFoodComponent } from './update-food/update-food.component';
 import { UpdateShoppingComponent } from './update-shopping/update-shopping.component';
 //import { ModalContentComponent } from './modal-content/modal-content.component';
 //import { ModalContainerComponent } from './modal-container/modal-container.component'
+import { ModalContentComponent } from './modal-content/modal-content.component';
+import { ModalContainerComponent } from './modal-container/modal-container.component'
+import { CommonModule } from '@angular/common';
 
 // import { FoodSearchComponent } from './food-search/food-search.component';
 
@@ -52,7 +55,8 @@ const material = [
         FormsModule,
         RouterModule,
         material,
-        NgbModule
+        NgbModule,
+        CommonModule
     ],
     declarations: [
         AppComponent,
