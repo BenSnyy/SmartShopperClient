@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { Routes, RouterModule } from '@angular/router';
@@ -25,15 +26,16 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
 
-import { CreateFoodComponent } from './create-food/create-food.component';
-import { DisplayFoodComponent } from './display-food/display-food.component';
-import { CreateShoppingComponent } from './create-shopping/create-shopping.component';
-import { DisplayShoppingComponent } from './display-shopping/display-shopping.component';
 import { DatabaseService } from './_services/database.service';
 import { AdminComponent } from './admin/admin.component';
+import { CreateFoodComponent } from './create-food/create-food.component';
+import { CreateShoppingComponent } from './create-shopping/create-shopping.component';
+import { DisplayFoodComponent } from './display-food/display-food.component';
+import { DisplayShoppingComponent } from './display-shopping/display-shopping.component';
 import { UpdateFoodComponent } from './update-food/update-food.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UpdateShoppingComponent } from './update-shopping/update-shopping.component';
+//import { ModalContentComponent } from './modal-content/modal-content.component';
+//import { ModalContainerComponent } from './modal-container/modal-container.component'
 import { ModalContentComponent } from './modal-content/modal-content.component';
 import { ModalContainerComponent } from './modal-container/modal-container.component'
 import { CommonModule } from '@angular/common';
@@ -73,8 +75,8 @@ const material = [
         AdminComponent,
         UpdateFoodComponent,
         UpdateShoppingComponent,
-        ModalContentComponent,
-        ModalContainerComponent,
+        //ModalContentComponent,
+        //ModalContainerComponent,
         // FoodSearchComponent
     ],
     providers: [
@@ -88,8 +90,8 @@ const material = [
     entryComponents: [
       UpdateFoodComponent,
       UpdateShoppingComponent,
-      ModalContentComponent,
-      ModalContainerComponent,
+      //ModalContentComponent,
+      //ModalContainerComponent,
     ]
   })
 
