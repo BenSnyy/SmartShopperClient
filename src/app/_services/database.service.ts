@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/internal/operators/tap';
+import { catchError } from 'rxjs/operators';
 
 import { environment } from 'src/environments/environment';
 import { Food } from '../_models/food.model';
 import { Shopping } from '../_models/shopping.model';
-import { Observable, of } from 'rxjs';
-import { tap } from 'rxjs/internal/operators/tap';
-import { catchError } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -22,22 +22,22 @@ export class DatabaseService {
 
   constructor(private http: HttpClient) { }
 
-//GETS
+//Gets
   getFood() : Observable<Food[]> {
-    return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`) 
+    return this.http.get<Food[]>(`${environment.apiUrl}/food/getall`);
   }
 
   getShopping() : Observable<Shopping[]> {
-    return this.http.get<Shopping[]>(`${environment.apiUrl}/shopping/getall`)
+    return this.http.get<Shopping[]>(`${environment.apiUrl}/shopping/getall`);
   }
 
 //Create or Make
   makeFood(food: Food) : Observable<Food[]> {
-    return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food, httpOptions)
+    return this.http.post<Food[]>(`${environment.apiUrl}/food/create`, food, httpOptions);
   }
 
   makeShopping(shopping: Shopping) : Observable<Shopping[]> {
-    return this.http.post<Shopping[]>(`${environment.apiUrl}/shopping/create`, shopping, httpOptions)
+    return this.http.post<Shopping[]>(`${environment.apiUrl}/shopping/create`, shopping, httpOptions);
   }
 
 //Deletes
@@ -49,11 +49,19 @@ export class DatabaseService {
     return this.http.delete<Shopping[]>(`${environment.apiUrl}/shopping/delete/${id}`);
   }
 
-
+//Updates or Patchs  
+  updateFood(id: number, food: Food) {
+    return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, food, httpOptions)
+  }
   
-  // updateFood(id: number) {
-    //   return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, food, httpOptions)
-    
+  updateShopping(id: number, shopping: Shopping) {
+    return this.http.put<Shopping[]>(`${environment.apiUrl}/shopping/update/${id}`, shopping, httpOptions)
+  }  
+
+  updateFoods(id: number) {
+    return this.http.put<Food[]>(`${environment.apiUrl}/food/update/${id}`, id, httpOptions)
+  } 
+  
     //Edit or Update
     // editFood(id: number) {
       //   return this.http.update(`${environment.apiUrl}/shopping/delete/${id}`); 

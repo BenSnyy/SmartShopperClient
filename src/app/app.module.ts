@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { Routes, RouterModule } from '@angular/router';
@@ -12,7 +13,6 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonToggleModule, MatIconModule, MatProgressSpinnerModule, MatToolbarModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component'; 
 import { HeaderComponent } from './header/header.component';
@@ -26,12 +26,20 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
 
-import { CreateFoodComponent } from './create-food/create-food.component';
-import { DisplayFoodComponent } from './display-food/display-food.component';
-import { CreateShoppingComponent } from './create-shopping/create-shopping.component';
-import { DisplayShoppingComponent } from './display-shopping/display-shopping.component';
 import { DatabaseService } from './_services/database.service';
 import { AdminComponent } from './admin/admin.component';
+import { CreateFoodComponent } from './create-food/create-food.component';
+import { CreateShoppingComponent } from './create-shopping/create-shopping.component';
+import { DisplayFoodComponent } from './display-food/display-food.component';
+import { DisplayShoppingComponent } from './display-shopping/display-shopping.component';
+import { UpdateFoodComponent } from './update-food/update-food.component';
+import { UpdateShoppingComponent } from './update-shopping/update-shopping.component';
+//import { ModalContentComponent } from './modal-content/modal-content.component';
+//import { ModalContainerComponent } from './modal-container/modal-container.component'
+// import { ModalContentComponent } from './modal-content/modal-content.component';
+// import { ModalContainerComponent } from './modal-container/modal-container.component';
+import { CommonModule } from '@angular/common';
+
 // import { FoodSearchComponent } from './food-search/food-search.component';
 
 const material = [
@@ -47,6 +55,8 @@ const material = [
         FormsModule,
         RouterModule,
         material,
+        NgbModule,
+        CommonModule
     ],
     declarations: [
         AppComponent,
@@ -63,6 +73,10 @@ const material = [
         CreateShoppingComponent,
         DisplayShoppingComponent,
         AdminComponent,
+        UpdateFoodComponent,
+        UpdateShoppingComponent,
+        // ModalContentComponent,
+        // ModalContainerComponent,
         // FoodSearchComponent
     ],
     providers: [
@@ -72,7 +86,13 @@ const material = [
         DatabaseService,
         HttpClient
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [
+      UpdateFoodComponent,
+      UpdateShoppingComponent,
+      // ModalContentComponent,
+      // ModalContainerComponent,
+    ]
   })
 
 export class AppModule { };

@@ -1,20 +1,20 @@
 // import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-// import { DisplayFoodComponent } from './display-food.component';
+// import { UpdateShoppingComponent } from './update-shopping.component';
 
-// describe('DisplayFoodComponent', () => {
-//   let component: DisplayFoodComponent;
-//   let fixture: ComponentFixture<DisplayFoodComponent>;
+// describe('UpdateShoppingComponent', () => {
+//   let component: UpdateShoppingComponent;
+//   let fixture: ComponentFixture<UpdateShoppingComponent>;
 
 //   beforeEach(async(() => {
 //     TestBed.configureTestingModule({
-//       declarations: [ DisplayFoodComponent ]
+//       declarations: [ UpdateShoppingComponent ]
 //     })
 //     .compileComponents();
 //   }));
 
 //   beforeEach(() => {
-//     fixture = TestBed.createComponent(DisplayFoodComponent);
+//     fixture = TestBed.createComponent(UpdateShoppingComponent);
 //     component = fixture.componentInstance;
 //     fixture.detectChanges();
 //   });

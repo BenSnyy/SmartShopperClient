@@ -1,0 +1,21 @@
+<div class="modal-header" >
+    <h4 class="modal-title">Update Shopping</h4>
+    <button type="button" class="close" aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')">
+    </button>
+</div>      
+          
+<form (ngSubmit)="submitForm()" class="modal-body" >
+    <label for="food">Food</label>
+    <input [(ngModel)]="_shopping.food" type="text" name="food" required>
+
+    <label for="quantity">Quantity</label>
+    <input [(ngModel)]="_shopping.quantity" type="number" name="quantity" required>
+    
+    <label for="brand">Brand</label>
+    <input [(ngModel)]="_shopping.brand" type="text" name="brand">
+</form>      
+      
+<div class="modal-footer">
+    <button type="submit" (click)="updateShopping()">Update</button>
+</div>
